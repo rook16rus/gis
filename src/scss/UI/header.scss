@@ -1,19 +1,41 @@
 .header {
-  padding-top: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
 
-  .site-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+    gap: var(--grid-offset);
   }
 
-  a {
-    display: block;
-    flex-shrink: 0;
+  &__container-block {
+    display: flex;
+    align-items: center;
 
-    img {
-      max-width: 6rem;
-      height: 3.3rem;
+    &:nth-child(1) {
+      grid-column: 5 span;
     }
+
+    &:nth-child(2) {
+      grid-column: 19 span;
+    }
+  }
+
+  &__call-btn {
+    margin-left: auto;
+  }
+
+  &__logo {
+    margin-right: 12.2rem;
+  }
+
+  &__nav {
+    margin-left: 13.4rem;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
   }
 }

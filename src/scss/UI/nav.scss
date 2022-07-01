@@ -1,0 +1,15 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  &__link {
+    font: var(--font-menu-item);
+    color: var(--color-text-support);
+    text-transform: uppercase;
+    font-stretch: 140%;
+    font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 500, 'XOPQ' 96, 'YOPQ' 107, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 618, 'opsz' 105;
+  }
+}

@@ -11,4 +11,5 @@ package-lock.json
 /**/_backstage
 /**/Thumbs.db
 /build/
+/includes/
 gsap-bonus

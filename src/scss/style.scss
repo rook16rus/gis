@@ -1,12 +1,41 @@
-:root {
-	// Typography
-	--main-ff: "Roboto", sans-serif;
-	--second-ff: "Roboto", sans-serif;
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,GRAD,XTRA,YTFI,YTUC@8..144,100,300,0,468,738,712;8..144,100,500,0,468,738,712;8..144,100,600,0,468,738,712;8..144,100,700,0,468,738,712;8..144,135,700,-126,539,788,671;8..144,135,700,0,468,738,712;8..144,135,700,17,539,788,671;8..144,140,400,0,468,738,712;8..144,140,400,25,501,788,712;8..144,140,500,0,468,738,712;8..144,140,500,12,508,788,712&display=swap');
 
-	// colors
-	--color-dark: #333;
-	--color-bg: #fafcfe;
-	--color-white: #fff;
+:root {
+  // colors
+  --color-dark: #002E33;
+  --color-bg: #F0FDFF;
+  --color-main: #28AAB9;
+  --color-main-drop: #1694A3;
+  --color-main-bg: #27B9CA;
+  --color-support: #B9DCE1;
+  --color-text: var(--color-dark);
+  --color-text-support: #9CA7B6;
+  --color-text-grey: #758082;
+  --color-white: #fff;
+  --color-accent: #EA67FF;
+
+  // Typography
+  --main-ff: "Roboto-Flex", sans-serif;
+
+  --font-heading-1: 700 5rem/1 var(--main-ff);
+  --font-heading-2: 700 3rem/1 var(--main-ff);
+  --font-heading-3: 700 2.4rem/1 var(--main-ff);
+  --font-heading-4: 700 2rem/1 var(--main-ff);
+  --font-heading-5: 700 1.2rem/120% var(--main-ff);
+  --font-subheading: 700 1.4rem/1 var(--main-ff);
+  --font-menu-item: 500 1.2rem/110% var(--main-ff);
+  --font-btn: 600 1.4rem/110% var(--main-ff);
+  --font-text-main: 400 1.6rem/150% var(--main-ff);
+  --font-text-md: 400 1.4rem/125% var(--main-ff);
+  --font-text-sm: 400 1.2rem/120% var(--main-ff);
+  --font-text-small: 300 0.8rem/130% var(--main-ff);
+  --font-num-big: 700 12rem/92% var(--main-ff);
+  --font-num-md: 700 8rem/92% var(--main-ff);
+  --font-num-small: 700 5.6rem/92% var(--main-ff);
+
+  // etc
+  --content-padding: 4rem;
+  --grid-offset: 16px;
 }
 
 @import "./helpers/**/*";

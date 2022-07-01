@@ -1,0 +1,115 @@
+.services {
+  &__heading {
+    margin-bottom: 7.2rem;
+    max-width: 69.5rem;
+  }
+
+  &__item-heading {
+    font: var(--font-heading-3);
+    text-transform: uppercase;
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+    max-width: 43rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(22, 1fr);
+    gap: var(--grid-offset);
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 38rem;
+    padding: 3.2rem;
+    grid-column: 11 span;
+    border: 1px solid var(--color-main);
+    border-radius: 3.2rem;
+    overflow: hidden;
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      .services__item-img {
+        right: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      .services__item-img--hover {
+        right: 1.57rem;
+      }
+    }
+
+    &:hover {
+      .services__item-img {
+        opacity: 0;
+      }
+
+      .services__item-img--hover {
+        opacity: 1;
+      }
+
+      .services__item-bg-img {
+        opacity: 1;
+      }
+
+      .services__item-link {
+        background-color: var(--color-main);
+        border-color: var(--color-main);
+
+        .icon {
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+
+  &__item-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-support);
+    transition: border-color 400ms, background-color 400ms;
+
+    &::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+    }
+
+    .icon {
+      color: var(--color-support);
+    }
+  }
+
+  &__item-bg-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    mix-blend-mode: darken;
+    opacity: 0.4;
+    border-radius: 0 3.2rem 3.2rem 0;
+    transition: opacity 400ms;
+  }
+
+  &__item-img {
+    position: absolute;
+    top: 1.8rem;
+    right: 2rem;
+    width: 44rem;
+    height: 33rem;
+    object-fit: contain;
+    mix-blend-mode: darken;
+    transition: opacity 400ms;
+  }
+
+  &__item-img--hover {
+    opacity: 0;
+  }
+}

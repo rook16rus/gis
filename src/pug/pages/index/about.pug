@@ -1,0 +1,30 @@
+section.section.about
+  .site-content-container.about__container
+    .about__content-container
+      .about__heading-container-block
+        h2.site-heading.about__heading
+          | колоссальный опыт на крупных проектах
+      .about__heading-container-block
+        .about__heading-text.site-main-text
+          p
+            | Cпециализируемся на внедрении геоинформационных
+            | систем для решения задач государственного и муниципального управления.
+        +button("о компании", "is-iconed", "arrow-right")
+    .about__content-container
+      .about__item-block
+        img(src="assets/images/about/img.jpg" alt="Картинка картинка" class="about__item-img")
+        .slider-nav.about__slider-nav
+          button.slider-nav__btn
+            +icon-mono("arrow-slider-left")(width="8" height="20" class="slider-nav__btn-icon")
+          button.slider-nav__btn
+            +icon-mono("arrow-slider-right")(width="8" height="20" class="slider-nav__btn-icon")
+        .about__item-content
+          h4.about__item-heading
+            | Одни из лидеров рынка
+          .about__item-text
+            span.about__item-num
+              | 20+
+            p
+              | реализованных проектов за последние 3 года
+      .about__item-block
+        img(src="assets/images/about/ppl.jpg" alt="Команда" class="about__item-image")

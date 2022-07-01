@@ -1,3 +1,54 @@
+-
+  let footer_nav = [
+    "Услуги",
+    "Партнеры",
+    "Проекты",
+    "Клиенты",
+    "О компании",
+    "Контакты",
+    "Карьера",
+  ]
+
+  let socialList = [
+    "fb",
+    "inst",
+    "ok",
+    "tg",
+    "tw",
+    "vk",
+  ]
+
 footer.footer
-	.site-container
-		h1 footer
+  img.footer__bg-img(src="assets/images/footer/bg.svg" alt="Сетка")
+  .site-container.footer__container
+    .footer__container-block
+      a.footer__logo.logo(href="/")
+        img(src="assets/images/logo.svg" alt="Логотип компании")
+    .footer__container-block
+      ul.footer__nav
+        for item in footer_nav
+          li.footer__nav-item: a.footer__nav-link(href="/")= item
+    .footer__container-block
+      a.footer__legend(href="tel:+78432120148") 8 843 212-01-48
+      p.footer__small-legend
+        | Республика Татарстан, г. Казань, ул. Марселя Салимжанова, 2В
+      a.footer__small-legend(href="mailto:post@gisgis.ru") post@gisgis.ru
+      ul.social
+        for item in socialList
+          li.social__item: a.social__link(href="/")
+            +icon-mono(item)(width="20" height="20")
+    .footer__container-block
+      p.footer__small-legend ООО «ГИСГИС»
+      p.footer__small-legend ОГРН: 12345678
+      p.footer__small-legend ИНН: 12345678
+  .site-container.footer__container.footer__copyright
+    .footer__container-block
+      p.footer__small-legend © 2022 ООО "ГИСГИС"
+    .footer__container-block
+      a.footer__small-legend(href="/") Политика конфиденциальности
+    .footer__container-block
+      a.footer__small-legend(href="/") Условия использования
+    .footer__container-block
+      a.footer__small-legend.footer__copyright-link(href="/")
+        | Создание сайта
+        +icon-multi("MarkWeber")(width="85" height="21")

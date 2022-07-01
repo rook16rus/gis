@@ -1,6 +1,23 @@
+-
+  let nav_arr = [
+    "О компании",
+    "Карьера",
+    "Партнеры",
+    "Клиенты",
+    "Контакты",
+  ]
+
 header.header
-  .site-container
-    a(href="/")
-      img(src="assets/images/logo.svg" alt="Logo")
-    button.button(data-path="modal")
-      | Открыть модалку
+  .site-container.header__container
+    .header__container-block
+      a.header__logo.logo(href="/")
+        img(src="assets/images/logo.svg" alt="Логотип компании")
+    .header__container-block
+      .header__btns
+        +button("Услуги")
+        +button("Проекты")
+      nav.nav.header__nav
+        ul.nav__list
+          for item in nav_arr
+            li.nav__item: a.nav__link(href="/")= item
+      +button("Связаться", "is-iconed", "chat")(class="header__call-btn")

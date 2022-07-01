@@ -1,0 +1,37 @@
+-
+  let services_arr = [
+    {
+      name: 'Создание и развитие ГИС ОГД',
+      img1: 'item-img1',
+      img2: 'item-img1-hover'
+    },
+    {
+      name: 'Создание и развитие муниципальной ГИС',
+      img1: 'item-img2',
+      img2: 'item-img2-hover'
+    },
+    {
+      name: 'Обработка и загрузка данных',
+      img1: 'item-img3',
+      img2: 'item-img3-hover'
+    },
+    {
+      name: 'Техническая поддержка и развитие',
+      img1: 'item-img4',
+      img2: 'item-img4-hover'
+    },
+  ]
+
+section.section.services
+  .site-content-container.services__container
+    h2.site-heading.services__heading
+      | Выполняем полный комплекс услуг
+    ul.services__list
+      for item in services_arr
+        li.services__item
+          img(src="assets/images/services/bg-net.jpg" alt="" class="services__item-bg-img")
+          img(src=`assets/images/services/${item.img1}.jpg` alt="" class="services__item-img")
+          img(src=`assets/images/services/${item.img2}.jpg` alt="" class="services__item-img services__item-img--hover")
+          h3.services__item-heading= item.name
+          a.services__item-link(href="/")
+            +icon-mono("arrow-right")(width="16" height="10")

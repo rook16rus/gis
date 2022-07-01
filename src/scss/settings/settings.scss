@@ -6,13 +6,13 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 10px;
   line-height: 1.2;
 }
 
 body {
   color: var(--color-dark);
-  font-family: var(--main-ff);
+  font: var(--font-text-main);
   background-color: var(--color-bg);
 }
 
@@ -159,9 +159,18 @@ select:-webkit-autofill:focus {
 
 .site-container {
   width: 100%;
-  max-width: 1470px;
+  max-width: 1616px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding-right: var(--content-padding);
+  padding-left: var(--content-padding);
+}
+
+.site-content-container {
+  width: 100%;
+  max-width: 1486px;
+  margin: 0 auto;
+  padding-right: var(--content-padding);
+  padding-left: var(--content-padding);
 }
 
 .page-wrapper {
@@ -192,3 +201,28 @@ button:focus {
   box-shadow: 0 0 0 10px red;
 }
 
+.site-heading {
+  font: var(--font-heading-1);
+  text-transform: uppercase;
+  font-stretch: 135%;
+  font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+}
+
+.section {
+  margin-bottom: 12rem;
+}
+
+.site-main-text {
+  font: var(--font-text-main);
+  font-stretch: 140%;
+  font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+
+  p {
+    margin-bottom: 1.5rem;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+}

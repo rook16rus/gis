@@ -1,0 +1,98 @@
+.about {
+  &__content-container {
+    display: grid;
+    grid-template-columns: repeat(22, 1fr);
+    gap: var(--grid-offset);
+
+    &:nth-of-type(1) {
+      margin-bottom: 7.2rem;
+    }
+  }
+
+  &__heading-container-block {
+    &:nth-child(1) {
+      grid-column: 12 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 10 span;
+    }
+  }
+
+  &__heading {
+    max-width: 56.6rem;
+  }
+
+  &__heading-text {
+    margin-bottom: 2.8rem;
+    max-width: 50.2rem;
+  }
+
+  &__item-block {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    grid-column: 11 span;
+    min-height: 46rem;
+    border: 1px solid var(--color-support);
+    border-radius: 3.2rem;
+    padding: 4.8rem;
+    overflow: hidden;
+
+    &:nth-of-type(2) {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &__item-content {
+    max-width: 30rem;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-heading {
+    font: var(--font-heading-4);
+    text-transform: uppercase;
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+  }
+
+  &__item-text {
+    margin-top: auto;
+
+    p {
+      font-stretch: 140%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+    }
+  }
+
+  &__item-num {
+    display: block;
+    margin-bottom: 1.2rem;
+    font: var(--font-num-big);
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+  }
+
+  &__slider-nav {
+    align-self: flex-start;
+  }
+
+  &__item-img {
+    position: absolute;
+    left: 4.8rem;
+    bottom: 4.8rem;
+    width: 21.1rem;
+    height: 23.6rem;
+    object-fit: cover;
+    mix-blend-mode: darken;
+  }
+
+  &__item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

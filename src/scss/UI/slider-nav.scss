@@ -1,0 +1,23 @@
+.slider-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 8.6rem;
+
+  &__btn {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-main);
+    border-radius: 50%;
+  }
+
+  &__btn-icon {
+    display: block;
+    width: 0.8rem;
+    height: 1rem;
+    color: var(--color-main);
+  }
+}
