@@ -1,0 +1,16 @@
+:root {
+	// Typography
+	--main-ff: "Roboto", sans-serif;
+	--second-ff: "Roboto", sans-serif;
+
+	// colors
+	--color-dark: #333;
+	--color-bg: #fafcfe;
+	--color-white: #fff;
+}
+
+@import "./helpers/**/*";
+@import './vendor/**/*';
+@import "./settings/**/*";
+@import "./UI/**/*";
+@import './pages/**/*';
