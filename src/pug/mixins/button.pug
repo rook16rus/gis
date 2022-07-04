@@ -1,6 +1,6 @@
-mixin button(name, mod, icon)
-  button.button(class=mod)&attributes(attributes)
-    if mod === 'is-iconed'
+mixin button(name, isIcon, icon, modClass)
+  button.button(class=[isIcon, modClass].join(' '))&attributes(attributes)
+    if isIcon === 'is-iconed'
       span.button__icon-wrapper
         +icon-mono(icon)(width="20" height="20" class="button__icon")
     | #{name}

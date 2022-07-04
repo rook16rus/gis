@@ -1,0 +1,51 @@
+.clients {
+  &__heading {
+    margin-bottom: 2rem;
+    max-width: 69.5rem;
+  }
+
+  &__heading-text {
+    max-width: 67.7rem;
+    margin-bottom: 7.2rem;
+
+    p {
+      font-stretch: 140%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 4rem;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border: 1px solid var(--color-support);
+
+    img {
+      display: block;
+      object-fit: contain;
+      width: 8.8rem;
+      height: 8.8rem;
+      mix-blend-mode: darken;
+      flex-shrink: 0;
+    }
+
+    p {
+      max-width: 34.1rem;
+      font-stretch: 140%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+-
+  const partners = [
+    {
+      name: "Вендор",
+      num: "5"
+    },
+    {
+      name: "ИТП град ",
+      num: "12"
+    },
+    {
+      name: "Космос 2",
+      num: "3"
+    },
+    {
+      name: "Skyori ",
+      num: "2"
+    },
+  ]
+
+section.partners.section
+  .site-content-container
+    .partners__container
+      .partners__heading-wrapper
+        .partners__heading-block
+          h2.site-heading.partners__heading
+            | Наши партнеры
+        .partners__heading-block
+          .partners__heading-text
+            p
+              | Сотрудничаем с лучшими разработчиками геоинформационных систем
+          +button("Партнеры", "is-iconed", "arrow-right", "is-white")(class="partners__btn")
+      .partners__list
+        for item in partners
+          .partners__item
+            .partners__item-block
+              .partners__item-logo-wrapper
+                img(src="assets/images/partners/img1.jpg" alt="" class="partners__item-logo")
+              span.partners__item-name= item.name
+            .partners__item-block
+              span.partners__num= item.num
+              .partners__num-text
+                span Совместных проектов
+                +icon-mono("arrow-top")(width="16" height="16")
+              +button("Сайт компании", null, null, null)(class="partners__item-btn")

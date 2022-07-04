@@ -1,4 +1,6 @@
 section.section.about
+  .site-ticker
+    .site-ticker__item
   .site-content-container.about__container
     .about__content-container
       .about__heading-container-block
@@ -13,11 +15,7 @@ section.section.about
     .about__content-container
       .about__item-block
         img(src="assets/images/about/img.jpg" alt="Картинка картинка" class="about__item-img")
-        .slider-nav.about__slider-nav
-          button.slider-nav__btn
-            +icon-mono("arrow-slider-left")(width="8" height="20" class="slider-nav__btn-icon")
-          button.slider-nav__btn
-            +icon-mono("arrow-slider-right")(width="8" height="20" class="slider-nav__btn-icon")
+        +slider-nav("prevtBtn1", "nextBtn1")(class="about__slider-nav")
         .about__item-content
           h4.about__item-heading
             | Одни из лидеров рынка

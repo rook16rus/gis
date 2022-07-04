@@ -1,0 +1,16 @@
+.site-ticker {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: block;
+    font: 700 8rem/1 var(--main-ff);
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: var(--color-accent);
+  }
+}

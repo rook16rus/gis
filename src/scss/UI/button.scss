@@ -39,4 +39,17 @@
     font-stretch: 150%;
     font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'500, 'XOPQ'96, 'YOPQ'95, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'50;
   }
+
+  &.is-white {
+    background-color: transparent;
+    color: var(--color-white);
+
+    .button__icon-wrapper {
+      background-color: var(--color-white);
+
+      .icon {
+        color: var(--color-dark);
+      }
+    }
+  }
 }

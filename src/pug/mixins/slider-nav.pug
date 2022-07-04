@@ -1,0 +1,6 @@
+mixin slider-nav(prevClass, nextClass)
+  .slider-nav&attributes(attributes)
+    button.slider-nav__btn(class=prevClass)
+      +icon-mono("arrow-slider-left")(width="8" height="20" class="slider-nav__btn-icon")
+    button.slider-nav__btn(class=nextClass)
+      +icon-mono("arrow-slider-right")(width="8" height="20" class="slider-nav__btn-icon")

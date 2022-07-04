@@ -1,0 +1,89 @@
+.team {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(22, 1fr);
+    gap: var(--grid-offset);
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:nth-child(1) {
+      grid-column: 12 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 10 span;
+    }
+  }
+
+  &__legend {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-main-bg);
+    color: var(--color-main-bg);
+    text-transform: uppercase;
+    border-radius: 3.2rem;
+    margin-bottom: 3.6rem;
+    font-stretch: 140%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    max-width: 62.8rem;
+  }
+
+  &__text {
+    max-width: 59.8rem;
+    margin-bottom: 6rem;
+  }
+
+  &__small-boxes {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-offset);
+  }
+
+  &__small-box {
+    grid-column: 5 span;
+    position: relative;
+    display: flex;
+    padding: 3.6rem;
+    border: 1px solid var(--color-support);
+    min-height: 28rem;
+    border-radius: 2.4rem;
+  }
+
+  &__small-boxes-img {
+    position: absolute;
+    top: 3.6rem;
+    left: 3.6rem;
+    display: block;
+    width: 7.2rem;
+    height: 8.5rem;
+    object-fit: cover;
+    mix-blend-mode: darken;
+  }
+
+  &__small-boxes-text {
+    display: block;
+    margin-top: auto;
+    max-width: 23.5rem;
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  &__btns {
+    margin-top: auto;
+    display: flex;
+    gap: 1.6rem;
+  }
+}

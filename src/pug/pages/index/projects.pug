@@ -1,0 +1,28 @@
+section.completed-projects.section
+  .site-content-container.completed-projects__container
+    .completed-projects__heading-row
+      .completed-projects__heading-wrapper
+        h2.site-heading.completed-projects__heading
+          | Реализованные проекты
+        .completed-projects__text
+          p
+            | Cпециализируюемся на внедрении геоинформационных систем
+            | для решения задач государственного и муниципального управления
+      +slider-nav("prevtBtn", "nextBtn")
+    .completed-projects__content
+      each i in Array.from(Array(3).keys())
+        .completed-projects__item.lazy(data-bg="assets/images/projects/bg1.webp" data-bg-fallback="assets/images/projects/bg1.jpg")
+          .completed-projects__item-info
+            .completed-projects__item-info-block
+              span.completed-projects__item-subheading 2021 - наст. время
+              .completed-projects__item-text
+                h4
+                  | Единая геоинформационная система администрации Екатеринбурга
+                p
+                  | Организация единого банка пространственных
+                  | данных о территории города и планах её развития,
+                  | доступного для всех подразделений Администрации
+            .completed-projects__item-info-block
+              span.completed-projects__item-num 25%
+              span.completed-projects__item-small-legend услуг предоставлено в электронном виде
+              +button("подробнее", "is-iconed", "arrow-right", "is-white")

@@ -1,0 +1,108 @@
+.completed-projects {
+  &__heading-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 7.2rem;
+  }
+
+  &__heading {
+    max-width: 69.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    max-width: 67.7rem;
+    font-stretch: 140%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+
+    p {
+      margin-bottom: 1.5rem;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-shrink: 0;
+    height: 62.6rem;
+    padding: 3.6rem;
+    border-radius: 3.2rem;
+    color: var(--color-white);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 101.8rem;
+  }
+
+  &__item-info {
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-info-block {
+    &:nth-child(1) {
+      max-width: 59.3rem;
+    }
+
+    &:nth-child(2) {
+      width: 27.1rem;
+      padding: 2.4rem;
+      border: 1px solid var(--color-white);
+      border-radius: 3.2rem;
+    }
+  }
+
+  &__item-subheading {
+    display: block;
+    margin-bottom: 2rem;
+    font: var(--font-subheading);
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+  }
+
+  &__item-text {
+
+
+    p {
+      max-width: 42rem;
+      font-stretch: 140%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+    }
+
+    h4 {
+      font: var(--font-heading-3);
+      text-transform: uppercase;
+      font-stretch: 135%;
+      margin-bottom: 2rem;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+    }
+  }
+
+  &__item-num {
+    display: block;
+    margin-bottom: 1rem;
+    font: var(--font-num-small);
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+  }
+
+  &__item-small-legend {
+    display: block;
+    font: var(--font-text-sm);
+    margin-bottom: 2.4rem;
+    font-stretch: 140%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+  }
+}
