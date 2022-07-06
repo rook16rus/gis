@@ -4,7 +4,7 @@
   border-radius: 99.9rem;
   color: var(--color-main);
   border: 0.1rem solid var(--color-main);
-  font: var(--font-menu-item);
+  font: var(--font-btn);
   text-transform: uppercase;
   letter-spacing: 0.01em;
   font-stretch: 140%;
@@ -28,18 +28,6 @@
     }
   }
 
-  &.is-iconed {
-    background-color: transparent;
-    color: var(--color-main);
-    border: none;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    font: var(--font-btn);
-    font-stretch: 150%;
-    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'500, 'XOPQ'96, 'YOPQ'95, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'50;
-  }
-
   &.is-white {
     background-color: transparent;
     color: var(--color-white);
@@ -51,5 +39,18 @@
         color: var(--color-dark);
       }
     }
+  }
+
+
+  &--is-iconed {
+    background-color: transparent;
+    color: var(--color-main);
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font: var(--font-btn);
+    font-stretch: 150%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'500, 'XOPQ'96, 'YOPQ'95, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'50;
   }
 }

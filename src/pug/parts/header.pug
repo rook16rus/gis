@@ -20,4 +20,8 @@ header.header
         ul.nav__list
           for item in nav_arr
             li.nav__item: a.nav__link(href="/")= item
-      +button("Связаться", "is-iconed", "chat")(class="header__call-btn")
+      button.header__burger-btn
+        span
+        span
+        span
+      +button("Связаться", "button--is-iconed", "chat")(class="header__call-btn")

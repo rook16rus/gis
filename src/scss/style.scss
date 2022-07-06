@@ -22,6 +22,7 @@
   --font-heading-3: 700 2.4rem/1 var(--main-ff);
   --font-heading-4: 700 2rem/1 var(--main-ff);
   --font-heading-5: 700 1.2rem/120% var(--main-ff);
+  --font-heading-3-mobile: 700 1.8rem/110% var(--main-ff);
   --font-subheading: 700 1.4rem/1 var(--main-ff);
   --font-menu-item: 500 1.2rem/110% var(--main-ff);
   --font-btn: 600 1.4rem/110% var(--main-ff);
@@ -44,3 +45,10 @@
 @import "./settings/**/*";
 @import "./UI/**/*";
 @import './pages/**/*';
+
+
+@include mq(md) {
+  :root {
+    --content-padding: 2rem;
+  }
+}

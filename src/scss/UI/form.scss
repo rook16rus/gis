@@ -2,6 +2,10 @@
   width: 100%;
   max-width: 60.7rem;
 
+  @include mq(md) {
+    max-width: 100%;
+  }
+
   &__label {
     position: relative;
     display: block;
@@ -14,6 +18,11 @@
 
     &:nth-last-of-type(1) {
       margin-bottom: 0;
+    }
+
+    @include mq(sm) {
+      height: 3.3rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -34,6 +43,18 @@
     &.is-active {
       top: -0.8rem;
       transform: scale(0.5);
+
+      @include mq(sm) {
+        top: -1.3rem;
+        transform: scale(0.7);
+      }
+    }
+
+    @include mq(sm) {
+      font: var(--font-text-main);
+      font-weight: 700;
+      font-stretch: 135%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
     }
   }
 
@@ -49,9 +70,20 @@
       ~.form__label-name {
         top: -0.8rem;
         transform: scale(0.5);
+
+        @include mq(sm) {
+          top: -1.3rem;
+          transform: scale(0.7);
+        }
       }
     }
 
+    @include mq(sm) {
+      font: var(--font-text-main);
+      font-weight: 700;
+      font-stretch: 135%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+    }
   }
 
   &__btn-wrapper {
@@ -59,6 +91,12 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 5.6rem;
+
+    @include mq(sm) {
+      margin-top: 3rem;
+      flex-direction: column;
+      gap: 3rem 0;
+    }
   }
 
   &__agreement {
@@ -101,5 +139,12 @@
 
   &__btn {
     padding: 2rem 4.2rem;
+
+    @include mq(sm) {
+      width: 100%;
+      text-align: center;
+      display: block;
+      padding: 1.2rem 3.2rem;
+    }
   }
 }

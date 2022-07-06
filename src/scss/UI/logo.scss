@@ -1,3 +1,7 @@
 .logo {
   max-width: 20.1rem;
+
+  @include mq(sm) {
+    max-width: 16.4rem;
+  }
 }

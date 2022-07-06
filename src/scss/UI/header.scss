@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: repeat(24,1fr);
     gap: var(--grid-offset);
+
+    @include mq(sm) {
+      grid-template-columns: repeat(2,1fr);
+    }
   }
 
   &__container-block {
@@ -19,23 +23,66 @@
     &:nth-child(2) {
       grid-column: 19 span;
     }
+
+    @include mq(sm) {
+      grid-column: 1 span !important;
+    }
   }
 
   &__call-btn {
     margin-left: auto;
+
+    @include mq(md) {
+      display: none;
+    }
   }
 
   &__logo {
     margin-right: 12.2rem;
+
+    @include mq(md) {
+      margin-right: 2rem;
+    }
   }
 
   &__nav {
     margin-left: 13.4rem;
+
+    @include mq(md) {
+      display: none;
+    }
   }
 
   &__btns {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  &__burger-btn {
+    @include mq(md, min) {
+      display: none;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    border-radius: 99.9rem;
+    background-color: var(--color-main);
+    gap: 0.4rem;
+    margin-left: auto;
+
+    span {
+      display: block;
+      width: 2.4rem;
+      height: 0.1rem;
+      background-color: var(--color-white);
+    }
   }
 }

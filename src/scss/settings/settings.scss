@@ -8,6 +8,38 @@
 html {
   font-size: 10px;
   line-height: 1.2;
+
+  @include mq(custom, max, 1536) {
+    font-size: 9px;
+  }
+
+  @include mq(custom, max, 1440) {
+    font-size: 8px;
+  }
+
+  @include mq(custom, max, 1366) {
+    font-size: 7px;
+  }
+
+  @include mq(custom, max, 784) {
+    font-size: 6px;
+  }
+
+  @include mq(sm) {
+    font-size: 10px;
+  }
+
+  @include mq(custom, max, 360) {
+    font-size: 9px;
+  }
+
+  @include mq(custom, max, 350) {
+    font-size: 8px;
+  }
+
+  @include mq(custom, max, 280) {
+    font-size: 7px;
+  }
 }
 
 body {
@@ -206,10 +238,20 @@ button:focus {
   text-transform: uppercase;
   font-stretch: 135%;
   font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+
+  @include mq(sm) {
+    font: var(--font-heading-3);
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+  }
 }
 
 .section {
   margin-bottom: 12rem;
+
+  @include mq(sm) {
+    margin-bottom: 8rem;
+  }
 }
 
 .site-main-text {
@@ -225,4 +267,11 @@ button:focus {
     }
   }
 
+
+  @include mq(sm) {
+    font: var(--font-text-md);
+
+    font-stretch: 140%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+  }
 }

@@ -17,13 +17,17 @@ section.clients.section
       p
         | Внедряем геоинформационные системы для
         | государственных структур и коммерческих организаций
-    .clients__list
-      for item in items
-        .clients__item
-          img(src="assets/images/clients/img1.jpg" alt="Государственное казенное учреждение «Центр цифровой трансформации Республики Татарстан»")
-          p= item
-    .clients__list
-      for item in items
-        .clients__item
-          img(src="assets/images/clients/img1.jpg" alt="Государственное казенное учреждение «Центр цифровой трансформации Республики Татарстан»")
-          p= item
+    .swiper.js-clients-slider
+      .clients__list.swiper-wrapper
+        for item in items
+          .clients__item.swiper-slide
+            img(src="assets/images/clients/img1.png" alt="Государственное казенное учреждение «Центр цифровой трансформации Республики Татарстан»")
+            p= item
+      .site-pagination
+    .swiper.js-clients-slider
+      .clients__list.swiper-wrapper
+        for item in items
+          .clients__item.swiper-slide
+            img(src="assets/images/clients/img1.png" alt="Государственное казенное учреждение «Центр цифровой трансформации Республики Татарстан»")
+            p= item
+      .site-pagination

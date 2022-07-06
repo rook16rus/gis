@@ -1,6 +1,10 @@
 .contact-us {
   margin-bottom: 14rem;
 
+  @include mq(sm) {
+    margin-bottom: 8rem;
+  }
+
   &__container {
     position: relative;
     padding: 12rem 6.4rem;
@@ -10,6 +14,16 @@
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     gap: var(--grid-offset);
+
+    @include mq(md) {
+      gap: 4rem;
+    }
+
+    @include mq(sm) {
+      padding: 4rem 2rem;
+      display: block;
+      border-radius: 2rem;
+    }
   }
 
   &__block {
@@ -19,6 +33,14 @@
 
     &:nth-of-type(2) {
       grid-column: 9 span;
+
+      @include mq(sm) {
+        margin-top: 4rem;
+      }
+    }
+
+    @include mq(md) {
+      grid-column: 20 span !important;
     }
   }
 
@@ -29,6 +51,10 @@
   &__tel {
     display: inline-block;
     margin-bottom: 4rem;
+
+    @include mq(sm) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__img {
@@ -39,5 +65,28 @@
     height: 39.6rem;
     display: block;
     object-fit: contain;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  &__text {
+    a {
+      @include mq(md) {
+        display: inline-block;
+        margin-top: 4rem;
+        text-decoration: underline;
+      }
+    }
+
+    @include mq(sm) {
+      font: var(--font-text-md);
+      max-width: 100%;
+
+      a {
+        margin-top: 2rem;
+      }
+    }
   }
 }
