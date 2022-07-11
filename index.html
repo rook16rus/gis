@@ -27,8 +27,10 @@
           </div>
           <div class="header__container-block">
             <div class="header__btns">
-              <button class="button">Услуги</button>
-              <button class="button">Проекты</button>
+              <button class="button"><span class="button__text">Услуги</span>
+              </button>
+              <button class="button"><span class="button__text">Проекты</span>
+              </button>
             </div>
             <nav class="nav header__nav">
               <ul class="nav__list">
@@ -49,20 +51,53 @@
                 </li>
               </ul>
             </nav>
-            <button class="header__burger-btn"><span></span><span></span><span></span>
+            <button class="header__burger-btn js-open-menu"><span></span><span></span><span></span>
             </button>
-            <button class="button button--is-iconed header__call-btn"><span class="button__icon-wrapper"><svg class="icon icon-chat button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#chat"></use></svg></span>Связаться</button>
+            <button class="button button--is-iconed header__call-btn"><span class="button__icon-wrapper"><svg class="icon icon-chat button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#chat"></use></svg></span><span class="button__text">Связаться</span>
+            </button>
           </div>
         </div>
       </header>
+      <div class="mobile-menu js-menu">
+        <div class="site-container mobile-menu__container">
+          <button class="mobile-menu__close-btn js-close-menu"><span></span><span></span>
+          </button>
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="/">О компании</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="/">Карьера</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="/">Партнеры</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="/">Клиенты</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="/">Контакты</a>
+            </li>
+          </ul>
+          <div class="mobile-menu__btns">
+            <button class="button mobile-menu__btn"><span class="button__text">Услуги</span>
+            </button>
+            <button class="button mobile-menu__btn"><span class="button__text">Проекты</span>
+            </button>
+            <button class="button mobile-menu__btn"><span class="button__text">Связаться</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
       <main class="page-main main">
         <section class="intro">
           <div class="site-container"></div>
         </section>
         <section class="section about">
-          <div class="site-ticker">
-            <div class="site-ticker__item"></div>
+          <div class="site-ticker" style="--ticker-speed:20s;">
+            <div class="site-ticker__item" style="background-image:url(assets/images/ticker-one.svg);"></div>
+            <div class="site-ticker__item" style="background-image:url(assets/images/ticker-one.svg);"></div>
           </div>
           <div class="site-content-container about__container">
             <div class="about__content-container">
@@ -73,28 +108,45 @@
                 <div class="about__heading-text site-main-text">
                   <p>Cпециализируемся на внедрении геоинформационных систем для решения задач государственного и муниципального управления.</p>
                 </div>
-                <button class="button button--is-iconed"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span>о компании</button>
+                <button class="button button--is-iconed"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span><span class="button__text">о компании</span>
+                </button>
               </div>
             </div>
             <div class="about__content-container">
               <div class="about__item-block">
                 <img class="about__item-img" src="assets/images/about/img.jpg" alt="Картинка картинка">
                 <div class="slider-nav about__slider-nav">
-                  <button class="slider-nav__btn prevtBtn1">
+                  <button class="slider-nav__btn js-about-btn-prev">
                     <svg class="icon icon-arrow-slider-left slider-nav__btn-icon" width="8" height="20">
                       <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-slider-left"></use>
                     </svg>
                   </button>
-                  <button class="slider-nav__btn nextBtn1">
+                  <button class="slider-nav__btn js-about-btn-next">
                     <svg class="icon icon-arrow-slider-right slider-nav__btn-icon" width="8" height="20">
                       <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-slider-right"></use>
                     </svg>
                   </button>
                 </div>
-                <div class="about__item-content">
-                  <h4 class="about__item-heading">Одни из лидеров рынка</h4>
-                  <div class="about__item-text"><span class="about__item-num">20+</span>
-                    <p>реализованных проектов за последние 3 года</p>
+                <div class="swiper about__slider js-about-slider">
+                  <div class="swiper-wrapper">
+                    <div class="about__item-content swiper-slide">
+                      <h4 class="about__item-heading">Одни из лидеров рынка0+</h4>
+                      <div class="about__item-text"><span class="about__item-num">20+</span>
+                        <p>реализованных проектов за последние 3 года</p>
+                      </div>
+                    </div>
+                    <div class="about__item-content swiper-slide">
+                      <h4 class="about__item-heading">Одни из лидеров рынка1+</h4>
+                      <div class="about__item-text"><span class="about__item-num">21+</span>
+                        <p>реализованных проектов за последние 3 года</p>
+                      </div>
+                    </div>
+                    <div class="about__item-content swiper-slide">
+                      <h4 class="about__item-heading">Одни из лидеров рынка2+</h4>
+                      <div class="about__item-text"><span class="about__item-num">22+</span>
+                        <p>реализованных проектов за последние 3 года</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -105,6 +157,10 @@
           </div>
         </section>
         <section class="section services">
+          <div class="site-ticker" style="--ticker-speed:20s;">
+            <div class="site-ticker__item" style="background-image:url(assets/images/ticker-two.svg);"></div>
+            <div class="site-ticker__item" style="background-image:url(assets/images/ticker-two.svg);"></div>
+          </div>
           <div class="site-content-container services__container">
             <h2 class="site-heading services__heading">Выполняем полный комплекс услуг</h2>
             <div class="swiper js-services-slider">
@@ -191,7 +247,8 @@
                       </div>
                     </div>
                     <div class="completed-projects__item-info-block"><span class="completed-projects__item-num">25%</span><span class="completed-projects__item-small-legend">услуг предоставлено в электронном виде</span>
-                      <button class="button button--is-iconed is-white"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span>подробнее</button>
+                      <button class="button button--is-iconed is-white"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span><span class="button__text">подробнее</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -204,7 +261,8 @@
                       </div>
                     </div>
                     <div class="completed-projects__item-info-block"><span class="completed-projects__item-num">25%</span><span class="completed-projects__item-small-legend">услуг предоставлено в электронном виде</span>
-                      <button class="button button--is-iconed is-white"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span>подробнее</button>
+                      <button class="button button--is-iconed is-white"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span><span class="button__text">подробнее</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -217,7 +275,8 @@
                       </div>
                     </div>
                     <div class="completed-projects__item-info-block"><span class="completed-projects__item-num">25%</span><span class="completed-projects__item-small-legend">услуг предоставлено в электронном виде</span>
-                      <button class="button button--is-iconed is-white"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span>подробнее</button>
+                      <button class="button button--is-iconed is-white"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span><span class="button__text">подробнее</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -311,70 +370,78 @@
                   <div class="partners__heading-text">
                     <p>Сотрудничаем с лучшими разработчиками геоинформационных систем</p>
                   </div>
-                  <button class="button button--is-iconed is-white partners__btn"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span>Партнеры</button>
+                  <button class="button button--is-iconed is-white partners__btn"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span><span class="button__text">Партнеры</span>
+                  </button>
                 </div>
               </div>
-              <div class="partners__list">
-                <div class="partners__item">
-                  <div class="partners__item-block">
-                    <div class="partners__item-logo-wrapper">
-                      <img class="partners__item-logo" src="assets/images/partners/img1.jpg" alt="">
-                    </div><span class="partners__item-name">Вендор</span>
-                  </div>
-                  <div class="partners__item-block"><span class="partners__num">5</span>
-                    <div class="partners__num-text"><span>Совместных проектов</span>
-                      <svg class="icon icon-arrow-top" width="16" height="16">
-                        <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top"></use>
-                      </svg>
+              <div class="swiper js-partnerns-slider">
+                <ul class="partners__list swiper-wrapper">
+                  <li class="partners__item swiper-slide">
+                    <div class="partners__item-block">
+                      <div class="partners__item-logo-wrapper">
+                        <img class="partners__item-logo" src="assets/images/partners/img1.jpg" alt="">
+                      </div><span class="partners__item-name">Вендор</span>
                     </div>
-                    <button class="button partners__item-btn">Сайт компании</button>
-                  </div>
-                </div>
-                <div class="partners__item">
-                  <div class="partners__item-block">
-                    <div class="partners__item-logo-wrapper">
-                      <img class="partners__item-logo" src="assets/images/partners/img1.jpg" alt="">
-                    </div><span class="partners__item-name">ИТП град</span>
-                  </div>
-                  <div class="partners__item-block"><span class="partners__num">12</span>
-                    <div class="partners__num-text"><span>Совместных проектов</span>
-                      <svg class="icon icon-arrow-top" width="16" height="16">
-                        <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top"></use>
-                      </svg>
+                    <div class="partners__item-block"><span class="partners__num">5</span>
+                      <div class="partners__num-text"><span>Совместных проектов</span>
+                        <svg class="icon icon-arrow-top" width="16" height="16">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top"></use>
+                        </svg>
+                      </div>
+                      <button class="button is-hovered-white partners__item-btn"><span class="button__text">Сайт компании</span>
+                      </button>
                     </div>
-                    <button class="button partners__item-btn">Сайт компании</button>
-                  </div>
-                </div>
-                <div class="partners__item">
-                  <div class="partners__item-block">
-                    <div class="partners__item-logo-wrapper">
-                      <img class="partners__item-logo" src="assets/images/partners/img1.jpg" alt="">
-                    </div><span class="partners__item-name">Космос 2</span>
-                  </div>
-                  <div class="partners__item-block"><span class="partners__num">3</span>
-                    <div class="partners__num-text"><span>Совместных проектов</span>
-                      <svg class="icon icon-arrow-top" width="16" height="16">
-                        <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top"></use>
-                      </svg>
+                  </li>
+                  <li class="partners__item swiper-slide">
+                    <div class="partners__item-block">
+                      <div class="partners__item-logo-wrapper">
+                        <img class="partners__item-logo" src="assets/images/partners/img1.jpg" alt="">
+                      </div><span class="partners__item-name">ИТП град</span>
                     </div>
-                    <button class="button partners__item-btn">Сайт компании</button>
-                  </div>
-                </div>
-                <div class="partners__item">
-                  <div class="partners__item-block">
-                    <div class="partners__item-logo-wrapper">
-                      <img class="partners__item-logo" src="assets/images/partners/img1.jpg" alt="">
-                    </div><span class="partners__item-name">Skyori</span>
-                  </div>
-                  <div class="partners__item-block"><span class="partners__num">2</span>
-                    <div class="partners__num-text"><span>Совместных проектов</span>
-                      <svg class="icon icon-arrow-top" width="16" height="16">
-                        <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top"></use>
-                      </svg>
+                    <div class="partners__item-block"><span class="partners__num">12</span>
+                      <div class="partners__num-text"><span>Совместных проектов</span>
+                        <svg class="icon icon-arrow-top" width="16" height="16">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top"></use>
+                        </svg>
+                      </div>
+                      <button class="button is-hovered-white partners__item-btn"><span class="button__text">Сайт компании</span>
+                      </button>
                     </div>
-                    <button class="button partners__item-btn">Сайт компании</button>
-                  </div>
-                </div>
+                  </li>
+                  <li class="partners__item swiper-slide">
+                    <div class="partners__item-block">
+                      <div class="partners__item-logo-wrapper">
+                        <img class="partners__item-logo" src="assets/images/partners/img1.jpg" alt="">
+                      </div><span class="partners__item-name">Космос 2</span>
+                    </div>
+                    <div class="partners__item-block"><span class="partners__num">3</span>
+                      <div class="partners__num-text"><span>Совместных проектов</span>
+                        <svg class="icon icon-arrow-top" width="16" height="16">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top"></use>
+                        </svg>
+                      </div>
+                      <button class="button is-hovered-white partners__item-btn"><span class="button__text">Сайт компании</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="partners__item swiper-slide">
+                    <div class="partners__item-block">
+                      <div class="partners__item-logo-wrapper">
+                        <img class="partners__item-logo" src="assets/images/partners/img1.jpg" alt="">
+                      </div><span class="partners__item-name">Skyori</span>
+                    </div>
+                    <div class="partners__item-block"><span class="partners__num">2</span>
+                      <div class="partners__num-text"><span>Совместных проектов</span>
+                        <svg class="icon icon-arrow-top" width="16" height="16">
+                          <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top"></use>
+                        </svg>
+                      </div>
+                      <button class="button is-hovered-white partners__item-btn"><span class="button__text">Сайт компании</span>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="site-pagination site-pagination--is-white"></div>
               </div>
             </div>
           </div>
@@ -396,8 +463,10 @@
                 </div>
               </div>
               <div class="team__btns">
-                <button class="button">Карьера у нас</button>
-                <button class="button">открытые Вакансии</button>
+                <button class="button"><span class="button__text">Карьера у нас</span>
+                </button>
+                <button class="button"><span class="button__text">открытые Вакансии</span>
+                </button>
               </div>
             </div>
             <div class="team__block">
@@ -406,6 +475,10 @@
           </div>
         </section>
         <section class="contact-us">
+          <div class="site-ticker" style="--ticker-speed:20s;">
+            <div class="site-ticker__item" style="background-image:url(assets/images/ticker-three.svg);"></div>
+            <div class="site-ticker__item" style="background-image:url(assets/images/ticker-three.svg);"></div>
+          </div>
           <div class="site-content-container">
             <div class="contact-us__container">
               <div class="contact-us__block">
@@ -424,7 +497,8 @@
                     <label class="form__agreement">
                       <input class="visually-hidden" type="checkbox"><span class="form__agreement-text">Я согласен на обработку персональных данных и<a href="/">политикой конфиденциальности</a></span>
                     </label>
-                    <button class="button form__btn">Отправить</button>
+                    <button class="button form__btn"><span class="button__text">Отправить</span>
+                    </button>
                   </div>
                 </form>
               </div>
