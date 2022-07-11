@@ -1,5 +1,7 @@
 .contact-us {
   margin-bottom: 14rem;
+  position: relative;
+  z-index: 2;
 
   @include mq(sm) {
     margin-bottom: 8rem;

@@ -145,6 +145,10 @@ a {
   text-decoration: none;
   transition: color 0.2s;
   color: inherit;
+
+  &:hover {
+    color: var(--color-main);
+  }
 }
 
 svg {

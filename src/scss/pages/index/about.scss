@@ -93,7 +93,6 @@
   }
 
   &__item-content {
-    max-width: 30rem;
     margin-left: auto;
     display: flex;
     flex-direction: column;
@@ -102,6 +101,16 @@
       max-width: 100%;
       margin-left: 0;
       flex-grow: 1;
+    }
+  }
+
+  &__slider {
+    max-width: 30rem;
+    margin: 0;
+    margin-left: auto;
+
+    @include mq(sm) {
+      max-width: 100%;
     }
   }
 
@@ -162,6 +171,7 @@
       position: absolute;
       top: 2rem;
       right: 2rem;
+      z-index: 2;
     }
   }
 

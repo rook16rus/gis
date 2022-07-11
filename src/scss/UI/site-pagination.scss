@@ -23,4 +23,14 @@
       border-radius: 10rem;
     }
   }
+
+  &--is-white {
+    .swiper-pagination-bullet {
+      background-color: var(--color-white);
+
+      &.swiper-pagination-bullet-active {
+        background-color: var(--color-white);
+      }
+    }
+  }
 }

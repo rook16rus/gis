@@ -21,7 +21,7 @@ export default () => {
         slidesPerView: 1,
         spaceBetween: 10,
         pagination: {
-          el: '.site-pagination',
+          el: slider.querySelector('.site-pagination'),
           type: 'bullets',
         },
       },

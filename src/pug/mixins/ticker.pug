@@ -1,0 +1,4 @@
+mixin ticker(name)
+  .site-ticker(style={"--ticker-speed": "20s"})
+    each i in Array.from(Array(2).keys())
+      .site-ticker__item(style={"background-image": `url(assets/images/${name}.svg)`})

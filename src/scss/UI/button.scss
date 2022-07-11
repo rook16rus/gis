@@ -1,4 +1,5 @@
 .button {
+  position: relative;
   padding: 1.2rem 3.2rem;
   background-color: var(--color-bg);
   border-radius: 99.9rem;
@@ -9,6 +10,8 @@
   letter-spacing: 0.01em;
   font-stretch: 140%;
   font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'500, 'XOPQ'96, 'YOPQ'95, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'50;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+  overflow: hidden;
 
   &__icon-wrapper {
     width: 4rem;
@@ -28,11 +31,76 @@
     }
   }
 
+  &__text {
+    transition: color var(--transition);
+  }
+
+  &:hover {
+    background-color: var(--color-main);
+    border-color: var(--color-main);
+    color: var(--color-white);
+  }
+
+  &:active {
+    background-color: var(--color-main-drop);
+  }
+
+  &.is-hovered-white {
+    border-color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-main-bg);
+      border-color: var(--color-white);
+    }
+
+    &:active {
+      background-color: var(--color-main);
+      border-color: var(--color-main);
+    }
+  }
+
   &.is-white {
     background-color: transparent;
     color: var(--color-white);
 
+    &::before {
+      background-color: var(--color-white);
+      z-index: 1;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      .button__text {
+        color: var(--color-main);
+      }
+
+      .button__icon-wrapper .icon {
+        color: var(--color-main);
+      }
+    }
+
+
+    &:active {
+      .button__text {
+        color: var(--color-white);
+      }
+
+      .button__icon-wrapper {
+        .icon {
+          color: var(--color-white) !important;
+        }
+      }
+    }
+
+    .button__text {
+      position: relative;
+      z-index: 2;
+    }
+
     .button__icon-wrapper {
+      position: relative;
+      z-index: 2;
       background-color: var(--color-white);
 
       .icon {
@@ -47,10 +115,43 @@
     color: var(--color-main);
     border: none;
     padding: 0;
+    padding-right: 1.6rem;
     display: flex;
     align-items: center;
     font: var(--font-btn);
     font-stretch: 150%;
     font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'500, 'XOPQ'96, 'YOPQ'95, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'50;
+
+    &:hover {
+      background-color: transparent;
+
+      &::before {
+        transform: translateX(0);
+      }
+    }
+
+    &:active {
+      .button__icon-wrapper {
+        background-color: var(--color-main-drop);
+      }
+
+      &::before {
+        background-color: var(--color-main-drop);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      z-index: -1;
+      background-color: var(--color-main);
+      border-radius: 99.9rem;
+      inset: 0;
+      transition: transform var(--transition);
+      content: "";
+    }
+
   }
 }

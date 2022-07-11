@@ -12,6 +12,30 @@
     justify-content: center;
     border: 1px solid var(--color-main);
     border-radius: 50%;
+    transition: background-color var(--transition), border-color var(--transition);
+
+    &:hover {
+      background-color: var(--color-main);
+      border-color: var(--color-main);
+
+      .icon {
+        color: var(--color-white);
+      }
+    }
+
+    &:active {
+      background-color: var(--color-main-drop);
+      border-color: var(--color-main-drop);
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      border-color: var(--color-support);
+
+      .icon {
+        color: var(--color-support);
+      }
+    }
   }
 
   &__btn-icon {
@@ -19,5 +43,6 @@
     width: 0.8rem;
     height: 1rem;
     color: var(--color-main);
+    transition: color var(--transition);
   }
 }

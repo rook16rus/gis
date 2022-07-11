@@ -1,0 +1,22 @@
+-
+  const list = [
+    "О компании",
+    "Карьера",
+    "Партнеры",
+    "Клиенты",
+    "Контакты",
+  ]
+
+.mobile-menu.js-menu
+  .site-container.mobile-menu__container
+    button.mobile-menu__close-btn.js-close-menu
+      span
+      span
+    ul.mobile-menu__list
+      for item in list
+        li.mobile-menu__item
+          a.mobile-menu__link(href="/")= item
+    .mobile-menu__btns
+      +button("Услуги", null, null, null)(class="mobile-menu__btn")
+      +button("Проекты", null, null, null)(class="mobile-menu__btn")
+      +button("Связаться", null, null, null)(class="mobile-menu__btn")

@@ -7,6 +7,9 @@ import activeInput from './modules/activeInput';
 import projectsSlider from './modules/projectsSlider';
 import servicesSlider from './modules/servicesSlider';
 import clientsSlider from './modules/clientsSlider';
+import aboutSlider from './modules/aboutSlider';
+import partnersSilder from './modules/partnersSilder';
+import mobileMenu from './modules/mobileMenu';
 
 documenReady(() => {
   window.gis_API = {};
@@ -17,4 +20,7 @@ documenReady(() => {
   projectsSlider();
   servicesSlider();
   clientsSlider();
+  aboutSlider();
+  partnersSilder();
+  mobileMenu();
 });

@@ -1,16 +1,44 @@
 .site-ticker {
   display: flex;
   align-items: center;
+  margin-bottom: 12rem;
+
+  @include mq(md) {
+    margin-bottom: 8rem;
+  }
 
   &__item {
-    display: block;
-    font: 700 8rem/1 var(--main-ff);
-    font-stretch: 135%;
-    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
-    text-transform: uppercase;
     flex-shrink: 0;
-    color: transparent;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: var(--color-accent);
+    display: block;
+    height: 8rem;
+    width: 200rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: scroll var(--ticker-speed) infinite linear;
+    margin-right: 4rem;
+
+    @include mq(md) {
+      height: 5rem;
+      width: 134rem;
+      background-position: left center;
+      margin-right: 2rem;
+    }
+
+    @include mq(sm) {
+      height: 4rem;
+      width: 99.6rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0)
   }
 }

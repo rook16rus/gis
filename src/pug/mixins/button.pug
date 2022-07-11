@@ -3,4 +3,5 @@ mixin button(name, isIcon, icon, modClass)
     if isIcon === 'button--is-iconed'
       span.button__icon-wrapper
         +icon-mono(icon)(width="20" height="20" class="button__icon")
-    | #{name}
+    span.button__text
+      | #{name}

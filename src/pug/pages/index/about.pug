@@ -1,6 +1,5 @@
 section.section.about
-  .site-ticker
-    .site-ticker__item
+  +ticker("ticker-one")
   .site-content-container.about__container
     .about__content-container
       .about__heading-container-block
@@ -15,14 +14,17 @@ section.section.about
     .about__content-container
       .about__item-block
         img(src="assets/images/about/img.jpg" alt="Картинка картинка" class="about__item-img")
-        +slider-nav("prevtBtn1", "nextBtn1")(class="about__slider-nav")
-        .about__item-content
-          h4.about__item-heading
-            | Одни из лидеров рынка
-          .about__item-text
-            span.about__item-num
-              | 20+
-            p
-              | реализованных проектов за последние 3 года
+        +slider-nav("js-about-btn-prev", "js-about-btn-next")(class="about__slider-nav")
+        .swiper.about__slider.js-about-slider
+          .swiper-wrapper
+            each i in Array.from(Array(3).keys())
+              .about__item-content.swiper-slide
+                h4.about__item-heading
+                  | Одни из лидеров рынка#{i}+
+                .about__item-text
+                  span.about__item-num
+                    | 2#{i}+
+                  p
+                    | реализованных проектов за последние 3 года
       .about__item-block
         img(src="assets/images/about/ppl.jpg" alt="Команда" class="about__item-image")
