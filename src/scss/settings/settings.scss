@@ -9,6 +9,10 @@ html {
   font-size: 10px;
   line-height: 1.2;
 
+  @include mq(custom, min, 1999) {
+    font-size: 12px;
+  }
+
   @include mq(custom, max, 1536) {
     font-size: 9px;
   }
@@ -199,6 +203,10 @@ select:-webkit-autofill:focus {
   margin: 0 auto;
   padding-right: var(--content-padding);
   padding-left: var(--content-padding);
+
+  @include mq(custom, min, 1999) {
+    max-width: 1900px;
+  }
 }
 
 .site-content-container {
@@ -207,6 +215,10 @@ select:-webkit-autofill:focus {
   margin: 0 auto;
   padding-right: var(--content-padding);
   padding-left: var(--content-padding);
+
+  @include mq(custom, min, 1999) {
+    max-width: 1900px;
+  }
 }
 
 .page-wrapper {
