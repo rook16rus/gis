@@ -10,6 +10,7 @@ import clientsSlider from './modules/clientsSlider';
 import aboutSlider from './modules/aboutSlider';
 import partnersSilder from './modules/partnersSilder';
 import mobileMenu from './modules/mobileMenu';
+import indexIntro from './modules/indexIntro';
 
 documenReady(() => {
   window.gis_API = {};
@@ -23,4 +24,5 @@ documenReady(() => {
   aboutSlider();
   partnersSilder();
   mobileMenu();
+  indexIntro();
 });
