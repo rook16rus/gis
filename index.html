@@ -11,7 +11,7 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#F0FDFF">
     <title>Главная | ГИС ГИС</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.1.1">
   </head>
@@ -117,14 +117,30 @@
               </div>
             </div>
             <div class="intro__content-block">
-              <h1 class="intro__content-heading">Внедряем геоинформационные системы для решения ваших задач</h1>
-              <div class="intro__content-text">
-                <p>Внедряем платформу Geometa, настраивая продукт и автоматизируя все необходимые процессы на основе технического задания.</p>
+              <div class="intro__text-mobile-wrapper">
+                <h1 class="intro__content-heading">Внедряем геоинформационные системы для решения ваших задач</h1>
+                <div class="intro__content-text">
+                  <p>Внедряем платформу Geometa, настраивая продукт и автоматизируя все необходимые процессы на основе технического задания.</p>
+                </div>
               </div>
             </div>
-            <div class="intro-layer is-locked">
-              <div class="intro-layer__name js-intro-names is-active">Офисы<div class="loader" style="--w: 1rem; --h: 1rem"></div>
+            <div class="intro__select">
+              <div class="intro__select-heading js-select-heading"><span class="intro__select-heading-text">Офисы</span>
+                <svg class="icon icon-arrow-top-bottom intro__select-heading-icon" width="16" heihgt="16">
+                  <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-top-bottom"></use>
+                </svg>
               </div>
+              <ul class="intro__select-choises js-select-list">
+                <li class="intro__select-choise js-select-choice is-active" data-index="0">Офисы</li>
+                <li class="intro__select-choise js-select-choice" data-index="1">Промышленная зона</li>
+                <li class="intro__select-choise js-select-choice" data-index="2">Ремонтные работы</li>
+                <li class="intro__select-choise js-select-choice" data-index="3">Жилая зона</li>
+                <li class="intro__select-choise js-select-choice" data-index="4">Строительная площадка</li>
+                <li class="intro__select-choise js-select-choice" data-index="5">Парк отдыха</li>
+              </ul>
+            </div>
+            <div class="intro-layer is-locked">
+              <div class="intro-layer__name js-intro-names is-active">Офисы</div>
               <div class="intro-layer__name js-intro-names">Промышленная зона<div class="loader" style="--w: 1rem; --h: 1rem"></div>
               </div>
               <div class="intro-layer__name js-intro-names">Ремонтные работы<div class="loader" style="--w: 1rem; --h: 1rem"></div>
@@ -139,6 +155,10 @@
                 <picture>
                   <source type="image/webp" srcset="assets/images/intro/layers/layer0_web.webp" alt="Layer">
                   <img class="intro-layer__image js-intro-layer is-active" src="assets/images/intro/layers/layer0_0.png" alt="Layer">
+                </picture>
+                <picture>
+                  <source type="image/webp" srcset="assets/images/intro/colored-full.webp" alt="Layer">
+                  <img class="intro-layer__image _mobile" src="assets/images/intro/colored-full.png" alt="Layer">
                 </picture>
               </div>
               <div class="intro-layer__tooltips">
