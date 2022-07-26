@@ -50,6 +50,11 @@ body {
   color: var(--color-dark);
   font: var(--font-text-main);
   background-color: var(--color-bg);
+
+  ::selection {
+    background-color: var(--color-main-drop);
+    color: var(--color-white);
+  }
 }
 
 ul,
@@ -255,6 +260,11 @@ button:focus {
   font-stretch: 135%;
   font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
 
+  .line {
+    padding-top: 1rem;
+    margin-top: -1rem;
+  }
+
   @include mq(sm) {
     font: var(--font-heading-3);
     font-stretch: 135%;
@@ -264,6 +274,12 @@ button:focus {
 
 .section {
   margin-bottom: 12rem;
+  // opacity: 0;
+  // transition: opacity 0.4s ease-in;
+
+  // &.fade-in {
+  //   opacity: 1;
+  // }
 
   @include mq(sm) {
     margin-bottom: 8rem;

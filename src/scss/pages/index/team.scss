@@ -187,4 +187,21 @@
       }
     }
   }
+
+  &__btn {
+    padding: 0.7rem 1rem;
+    padding-left: 2.4rem;
+    display: flex;
+    align-items: center;
+
+    @include mq(sm) {
+      justify-content: space-between;
+    }
+
+    &.mod-hh {
+      .button__right-icon-wrapper {
+        background-color: #D6001C;
+      }
+    }
+  }
 }

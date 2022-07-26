@@ -15,10 +15,16 @@ import { loadImages } from './modules/loadIllustration';
 import maskClickHandle from './modules/maskClickHandle';
 import indexIntroMobile from './modules/indexIntroMobile';
 import introSelect from './modules/introSelect';
+import headingAnimations from './modules/headingAnimations';
+import firstLoadAnimation from './modules/firstLoadAnimation';
+import validation from './modules/validation';
+
 const descktop = window.matchMedia("(min-width: 992px)");
+
 
 window.addEventListener("load", () => {
   const preloader = document.querySelector(".preloader");
+  firstLoadAnimation();
 
   preloader.classList.add("is-hidden");
 
@@ -45,4 +51,6 @@ documenReady(() => {
   mobileMenu();
   descktop.matches ? indexIntro() : indexIntroMobile();
   introSelect();
+  headingAnimations();
+  validation();
 });

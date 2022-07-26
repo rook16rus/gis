@@ -2,7 +2,7 @@ section.section.team
   .site-content-container.team__container
     .team__block
       span.team__legend МЫ ИЩЕМ ТАЛАНТЫ
-      h2.site-heading.team__heading Присоединяйтесь к&nbsp;команде профессионалов
+      h2.site-heading.team__heading.js-heading Присоединяйтесь к&nbsp;команде профессионалов
       .team__text
         p
           | Работа у нас — это всегда интересные задачи, возможность проявить себя и поддержка коллектива.
@@ -15,7 +15,7 @@ section.section.team
           img(data-src="assets/images/team/box-img.jpg" src="#" alt="" class="lazyload team__small-boxes-img")
           span.team__small-boxes-text Стабильная заработная плата и премии за достижения
       .team__btns
-        +button("Карьера у нас", null, null, null)
-        +button("открытые Вакансии", null, null, null)
+        +button("Карьера у нас", null, null, null, "arrow-right")(class="team__btn")
+        +button("открытые Вакансии", null, null, null, "hh")(class="team__btn mod-hh")
     .team__block
       img(data-src="assets/images/team/block-img.jpg" src="#" alt="" class="lazyload team__img")

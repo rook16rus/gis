@@ -154,4 +154,26 @@
     }
 
   }
+
+  &__right-icon-wrapper {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background-color: var(--color-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+
+    @include mq(sm) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__right-icon {
+    color: var(--color-white);
+    width: 1.4rem;
+    height: 1rem;
+  }
 }
