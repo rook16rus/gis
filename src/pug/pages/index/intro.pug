@@ -31,7 +31,18 @@
     },
   ]
 
+  const choises = [
+    "Офисы",
+    "Промышленная зона",
+    "Ремонтные работы",
+    "Жилая зона",
+    "Строительная площадка",
+    "Парк отдыха"
+  ]
+
 section.intro.section
+  img(src="assets/images/intro/cloud.png" alt="Облака" class="intro__cloud")
+  img(src="assets/images/intro/cloud.png" alt="Облака" class="intro__cloud")
   .intro__content.site-content-container
     .intro__content-block
       .intro__heading-text-wrapper
@@ -41,19 +52,35 @@ section.intro.section
           p
             | Настроим продукт и автоматизируем все необходимые процессы на основе технического задания
     .intro__content-block
-      h1.intro__content-heading
-        | Внедряем геоинформационные системы для решения ваших задач
-      .intro__content-text
-        p
-          | Внедряем платформу Geometa, настраивая продукт и автоматизируя все необходимые процессы на основе технического задания.
+      .intro__text-mobile-wrapper
+        h1.intro__content-heading
+          | Внедряем геоинформационные системы для решения ваших задач
+        .intro__content-text
+          p
+            | Внедряем платформу Geometa, настраивая продукт и автоматизируя все необходимые процессы на основе технического задания.
+    .intro__select
+      .intro__select-heading.js-select-heading
+        span.intro__select-heading-text Офисы
+        +icon-mono("arrow-top-bottom")(width="16" heihgt="16" class="intro__select-heading-icon")
+      ul.intro__select-choises.js-select-list
+        for item, index in choises
+          - let isActive = index === 0 ? "is-active" : null
+          li.intro__select-choise.js-select-choice(data-index=index class=isActive)= item
 
-    .intro-layer
+    .intro-layer.is-locked
       for item, index in names
         - let isFirst = index === 0 ? "is-active" : null
         .intro-layer__name.js-intro-names(class=isFirst)= item
-      each i in Array.from(Array(6).keys())
-        - let isFirst = i === 0 ? "is-active" : null
-        img(src=`assets/images/intro/layer${i}.png` alt="Layer" class="intro-layer__image js-intro-layer" class=isFirst)
+          if index !== 0
+            +loader("1rem", "1rem")
+
+      .js-layer-container
+        picture
+          source(type="image/webp" srcset="assets/images/intro/layers/layer0_web.webp" alt="Layer")
+          img(src="assets/images/intro/layers/layer0_0.png" alt="Layer" class="intro-layer__image js-intro-layer is-active")
+        picture
+          source(type="image/webp" srcset="assets/images/intro/colored-full.webp" alt="Layer")
+          img(src="assets/images/intro/colored-full.png" alt="Layer" class="intro-layer__image _mobile")
       .intro-layer__tooltips
         .intro-tooltip.js-tooltip.is-choosen(style={"top": "29%", "left": "37%"} data-tooltip-index="0")
           button.intro-tooltip__btn

@@ -1,4 +1,4 @@
-section.section.about
+section.section(id="pannel")
   +ticker("ticker-one")
   .site-content-container.about__container
     .about__content-container
@@ -13,7 +13,7 @@ section.section.about
         +button("о компании", "button--is-iconed", "arrow-right")
     .about__content-container
       .about__item-block
-        img(src="assets/images/about/img.jpg" alt="Картинка картинка" class="about__item-img")
+        img(data-src="assets/images/about/img.jpg" src="#" alt="Картинка картинка" class="about__item-img lazyload")
         +slider-nav("js-about-btn-prev", "js-about-btn-next")(class="about__slider-nav")
         .swiper.about__slider.js-about-slider
           .swiper-wrapper
@@ -27,4 +27,4 @@ section.section.about
                   p
                     | реализованных проектов за последние 3 года
       .about__item-block
-        img(src="assets/images/about/ppl.jpg" alt="Команда" class="about__item-image")
+        img(data-src="assets/images/about/ppl.jpg" src="#" alt="Команда" class="about__item-image lazyload")

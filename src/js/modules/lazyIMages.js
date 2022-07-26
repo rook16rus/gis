@@ -1,4 +1,6 @@
-import LazyLoad from 'vanilla-lazyload';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import '../../assets/js/lazysizesBG.js';
 import canUseWebp from '../helpers/canUseWebp';
 
 export default () => {
@@ -10,10 +12,5 @@ export default () => {
 
       item.setAttribute('data-bg', srcBgFallback);
     });
-  }
-
-  // eslint-disable-next-line no-unused-vars
-  const lazyLoadInstance = new LazyLoad({
-    elements_selector: '.lazy',
-  });
+  };
 };

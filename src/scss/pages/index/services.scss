@@ -147,6 +147,9 @@
     opacity: 0.4;
     border-radius: 0 3.2rem 3.2rem 0;
     transition: opacity 400ms;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 
     @include mq(lg) {
       opacity: 1;

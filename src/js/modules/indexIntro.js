@@ -4,68 +4,56 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default () => {
-  const imgs = Array.from(document.querySelectorAll(".js-intro-layer"));
-  const masks = Array.from(document.querySelectorAll(".js-mask-path"));
-  const names = Array.from(document.querySelectorAll(".js-intro-names"));
-  const tooltips = Array.from(document.querySelectorAll(".js-tooltip"));
-  const headerHeight = document.querySelector(".header").offsetHeight;
+  const DURATION = 0.5;
+  const layer = document.querySelector(".intro-layer");
+  // const descktop = window.matchMedia("(min-width: 1201px)");
+  const mobile = window.matchMedia("(max-width: 1200px)");
+  const OFFSET = mobile.matches ? 80 : 150;
+
+  if (!layer) return;
+
   const timeline = gsap.timeline({
     paused: true,
     reversed: true,
+    scrollTrigger: {
+      trigger: ".intro",
+      pin: true,
+      start: "top 10%",
+      end: "bottom 40%",
+    },
+    onComplete: () => document.querySelector(".intro-layer").classList.remove("is-locked"),
+    onReverseComplete: () => document.querySelector(".intro-layer").classList.add("is-locked"),
   });
 
-  if (!imgs.length) return;
+  ScrollTrigger.matchMedia({
+    "(min-width: 1537px)": function () {
+      timeline
+        .to(".intro__content-block:nth-child(2)", { opacity: 0, duration: DURATION, ease: "power1.out" })
+        .to(".intro-layer", {
+          x: 0, xPercent: -50, left: "50%", y: 0, top: "-5rem", duration: DURATION, zIndex: 30,
+          ease: "power1.out", scale: 1, pointerEvents: "auto"
+        }, `-=${DURATION}`)
+        .to(".intro__heading-text-wrapper", { opacity: 1, duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
+        .to(".intro__cloud", { opacity: 0, visibility: "hidden", duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
+    },
+    "(max-width: 1536px)": function () {
+      timeline
+        .to(".intro__content-block:nth-child(2)", { opacity: 0, duration: DURATION, ease: "power1.out" })
+        .to(".intro-layer", {
+          x: 0, xPercent:-50, left:"50%", y: 0, yPercent:-50, top:"50%", duration: DURATION, zIndex: 30,
+          ease: "power1.out", scale: 1, pointerEvents: "auto"
+        }, `-=${DURATION}`)
+        .to(".intro__heading-text-wrapper", { opacity: 1, duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
+        .to(".intro__cloud", { opacity: 0, visibility: "hidden", duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
+    },
+    "all": function () {
+
+    }
+  });
 
   window.addEventListener("scroll", () => {
     let scrollDistance = window.scrollY;
 
-    if (scrollDistance >= 50) {
-      timeline.play();
-    } else {
-      timeline.reverse();
-    }
-  });
-
-  timeline
-    .to(".intro__content-block:nth-child(2)", {
-      opacity: 0,
-      duration: 0.5,
-      ease: "none",
-    })
-    .to(".intro-layer", {
-      x: 0,
-      xPercent: -50,
-      left: "50%",
-      y: 0,
-      top: "-3rem",
-      duration: 0.5,
-      ease: "none",
-      scale: 1,
-      pointerEvents: "auto"
-    }, "-=0.5")
-    .to(".intro__heading-text-wrapper", {
-      opacity: 1,
-      duration: 0.5,
-      ease: "none",
-    }, "-=0.5")
-
-
-  masks.forEach((mask, index) => {
-    mask.addEventListener("click", () => {
-      const num = Number(mask.dataset.index);
-
-      imgs.forEach(img => img.classList.remove("is-active"));
-      names.forEach(name => name.classList.remove("is-active"));
-
-      tooltips.forEach(tooltip => { tooltip.classList.remove("is-choosen") });
-      tooltips.forEach(tooltip => {
-        if (Number(tooltip.dataset.tooltipIndex) === num) {
-          tooltip.classList.add("is-choosen");
-        }
-      });
-
-      imgs[num].classList.add("is-active");
-      names[num].classList.add("is-active");
-    });
+    scrollDistance >= OFFSET ? timeline.play() : timeline.reverse();
   });
 };

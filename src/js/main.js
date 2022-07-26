@@ -11,6 +11,25 @@ import aboutSlider from './modules/aboutSlider';
 import partnersSilder from './modules/partnersSilder';
 import mobileMenu from './modules/mobileMenu';
 import indexIntro from './modules/indexIntro';
+import { loadImages } from './modules/loadIllustration';
+import maskClickHandle from './modules/maskClickHandle';
+import indexIntroMobile from './modules/indexIntroMobile';
+import introSelect from './modules/introSelect';
+const descktop = window.matchMedia("(min-width: 992px)");
+
+window.addEventListener("load", () => {
+  const preloader = document.querySelector(".preloader");
+
+  preloader.classList.add("is-hidden");
+
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 450);
+
+
+  descktop.matches ?
+    loadImages().then(() => maskClickHandle()) : null;
+});
 
 documenReady(() => {
   window.gis_API = {};
@@ -24,5 +43,6 @@ documenReady(() => {
   aboutSlider();
   partnersSilder();
   mobileMenu();
-  indexIntro();
+  descktop.matches ? indexIntro() : indexIntroMobile();
+  introSelect();
 });

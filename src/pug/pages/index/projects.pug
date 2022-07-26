@@ -12,7 +12,7 @@ section.completed-projects.section
     .completed-projects__content.js-project-slider.swiper
       .swiper-wrapper
         each i in Array.from(Array(3).keys())
-          .swiper-slide.completed-projects__item.lazy(data-bg="assets/images/projects/bg1.webp" data-bg-fallback="assets/images/projects/bg1.jpg")
+          .swiper-slide.completed-projects__item.lazyload(data-bg="assets/images/projects/bg1.jpg")
             .completed-projects__item-info
               .completed-projects__item-info-block
                 span.completed-projects__item-subheading 2021 - наст. время

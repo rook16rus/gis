@@ -31,9 +31,9 @@ section.section.services
       ul.services__list.swiper-wrapper
         for item in services_arr
           li.services__item.swiper-slide
-            img(src="assets/images/services/bg-net.png" alt="" class="services__item-bg-img")
-            img(src=`assets/images/services/${item.img1}.png` alt="" class="services__item-img")
-            img(src=`assets/images/services/${item.img2}.png` alt="" class="services__item-img services__item-img--hover")
+            img(data-src="assets/images/services/bg-net.png" src="#" alt="" class="services__item-bg-img lazyload")
+            img(data-src=`assets/images/services/${item.img1}.png` src="#" alt="" class="services__item-img lazyload")
+            img(data-src=`assets/images/services/${item.img2}.png` src="#" alt="" class="services__item-img services__item-img--hover lazyload")
             h3.services__item-heading= item.name
             a.services__item-link(href="/")
               +icon-mono("arrow-right")(width="16" height="10")

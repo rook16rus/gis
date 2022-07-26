@@ -10,7 +10,7 @@ html {
   line-height: 1.2;
 
   @include mq(custom, min, 1999) {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   @include mq(custom, max, 1536) {
@@ -205,7 +205,7 @@ select:-webkit-autofill:focus {
   padding-left: var(--content-padding);
 
   @include mq(custom, min, 1999) {
-    max-width: 1900px;
+    max-width: 2100px;
   }
 }
 
@@ -217,7 +217,7 @@ select:-webkit-autofill:focus {
   padding-left: var(--content-padding);
 
   @include mq(custom, min, 1999) {
-    max-width: 1900px;
+    max-width: 2000px;
   }
 }
 
