@@ -1,0 +1,48 @@
+-
+  const slcts = [
+    {
+      name: "Реализация",
+      text: "Все года"
+    },
+    {
+      name: "Партнер проекта",
+      text: "Все партнеры"
+    },
+    {
+      name: "Заказчик",
+      text: "Все заказчики"
+    },
+    {
+      name: "Тип проекта",
+      text: "Все проекты"
+    },
+  ]
+
+section.page-intro
+  .site-content-container.page-intro__container
+    .page-intro__container-block
+      +button("На главную", "button--is-iconed", "arrow-right", null, null)(class="button--mod-back")
+    .page-intro__container-block
+      h1.page-intro__heading.site-heading Реализованные проекты
+      .page-intro__text
+        p
+          | Текст — зафиксированная на каком-либо материальном носителе человеческая мысль.
+      +button("Показать фильтр", null, null, null, "filter")(class="projects__mobile-bar-btn js-filter-btn")
+      .projects-bar.js-filter-container
+        .projects-bar__inner
+          .projects-bar__heading-wrapper
+            h4.projects-bar__heading Фильтр проектов
+            buton.projects-bar__filter-close.js-filter-close-btn
+              span
+              span
+          .projects-bar__grid-inner
+            for item in slcts
+              .projects-bar__item
+                .select
+                  .select__label= item.name
+                  select(name="name" class="projects-bar__select js-custom-select")
+                    option(value=item.text placeholder)= item.text
+                    - for(let i = 0; i<7; i++)
+                      option(value=`202${i}`) 202#{i}
+          +button("Применить", null, null, null, null)(class="projects-bar__btn js-filter-close-btn")
+

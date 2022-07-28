@@ -71,10 +71,11 @@
     font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
 
     &.parsley-error {
-      ~ .error {
+      ~.error {
         display: flex;
       }
     }
+
     &:focus {
       ~.form__label-name {
         top: -0.8rem;
@@ -115,7 +116,7 @@
     cursor: pointer;
 
     input:checked {
-      ~ .form__agreement-text {
+      ~.form__agreement-text {
         &::before {
           background-color: var(--color-white);
         }
@@ -150,6 +151,16 @@
       border-radius: 0.6rem;
       content: "";
     }
+
+    @include mq(sm) {
+      font: var(--font-text-sm);
+      padding-left: 3rem;
+
+      a {
+        display: inline;
+      }
+    }
+
   }
 
   &__agreement-icon {

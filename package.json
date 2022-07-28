@@ -91,6 +91,7 @@
 	},
 	"dependencies": {
 		"canvg": "^4.0.1",
+		"choices.js": "^10.1.0",
 		"gsap": "^3.10.4",
 		"lazysizes": "^5.3.2",
 		"reset-css": "^5.0.1",

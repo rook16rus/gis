@@ -18,6 +18,8 @@ import introSelect from './modules/introSelect';
 import headingAnimations from './modules/headingAnimations';
 import firstLoadAnimation from './modules/firstLoadAnimation';
 import validation from './modules/validation';
+import initSelects from './modules/selects';
+import projectsFilter from './modules/projectsFilter';
 
 const descktop = window.matchMedia("(min-width: 992px)");
 
@@ -53,4 +55,6 @@ documenReady(() => {
   introSelect();
   headingAnimations();
   validation();
+  initSelects();
+  projectsFilter();
 });

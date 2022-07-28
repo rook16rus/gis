@@ -246,14 +246,6 @@ select:-webkit-autofill:focus {
   width: 100%;
 }
 
-.js-focus-visible button:focus:not(.focus-visible) {
-  box-shadow: none;
-}
-
-button:focus {
-  box-shadow: 0 0 0 10px red;
-}
-
 .site-heading {
   font: var(--font-heading-1);
   text-transform: uppercase;

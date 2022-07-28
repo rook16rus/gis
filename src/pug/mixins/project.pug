@@ -1,0 +1,12 @@
+mixin project(img, tags, date, name, text)
+  .projects-card&attributes(attributes)
+    .projects-card__img-wrapper
+      .projects-card__tags
+        for tag in tags
+          span.projects-card__tag= tag
+      img(src=`assets/images/projects-cards/${img}.jpg` alt="")
+    span.projects-card__date= date
+    h4.projects-card__name= name
+    .projects-card__text
+      p= text
+    +button("поСмотреть проект", "button--is-iconed", "arrow-right", null, null)(class="projects-card__btn")
