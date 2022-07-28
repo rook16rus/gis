@@ -12,6 +12,8 @@ export default () => {
     paused: true
   });
 
+  if (!heading) return;
+
   const splitedText = new SplitText(heading, {
     type: 'lines, chars',
     linesClass: "line"
@@ -23,7 +25,7 @@ export default () => {
   gsap.set(header, { opacity: 0 });
 
   timeline
-    .from(layer, { scale: 1.2, xPercent: -20, yPercent: -10, duration: 2, ease: "power2.out" }, "-=0.8")
+    .from(layer, { scale: 1.2, xPercent: -20, yPercent: -10, duration: 2, ease: "power2.out" })
     .to(splitedText.chars, { yPercent: 0, duration: 0.8, ease: "power2.out" })
     .to(headingText, { opacity: 1, duration: 0.6, ease: "power2.out", clearProps: "all" }, "-=0.7")
     .to(header, { opacity: 1, duration: 0.6, ease: "power2.out", clearProps: "all" }, "-=0.6")

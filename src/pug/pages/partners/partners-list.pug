@@ -1,0 +1,37 @@
+-
+  const cardslist = [
+    {
+      name: "Джемс девелопмент",
+      text: "Краткое описание партнера и его деятельности",
+      img: "img1",
+      linkText: "5 Совместных проектов",
+      alt: "Логотоп компании Джемс девелопмент"
+    },
+    {
+      name: "Джемс восток",
+      text: "Краткое описание партнера и его деятельности",
+      img: "img1",
+      linkText: "5 Совместных проектов",
+      alt: "Логотоп компании Джемс восток"
+    },
+    {
+      name: "ИТП «град»",
+      text: "Краткое описание партнера и его деятельности",
+      img: "img1",
+      linkText: "5 Совместных проектов",
+      alt: "Логотоп компании ИТП «град»"
+    },
+    {
+      name: "НПЦ «Космос-2»",
+      text: "Краткое описание партнера и его деятельности",
+      img: "img1",
+      linkText: "5 Совместных проектов",
+      alt: "Логотоп компании НПЦ «Космос-2»"
+    },
+  ]
+
+section.partners-list
+  .site-content-container
+    .cards-list
+      for item in cardslist
+        +card(item.name, item.text, item.img, item.linkText, item.alt)(class="cards-list__item")

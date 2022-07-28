@@ -1,0 +1,33 @@
+-
+  const cardslist = [
+    {
+      name: "Государственное казенное учреждение «Центр цифровой трансформации Республики Татарстан»",
+      img: "img2",
+      linkText: "Посмотреть Проекты",
+      alt: "Логотоп компании"
+    },
+    {
+      name: "Министерство информатизации и связи Удмуртской Республики",
+      img: "img2",
+      linkText: "Посмотреть Проекты",
+      alt: "Логотоп компании"
+    },
+    {
+      name: "Министерство информационных технологий, связи и цифрового развития Челябинской области",
+      img: "img2",
+      linkText: "Посмотреть Проекты",
+      alt: "Логотоп компании"
+    },
+    {
+      name: "Администрация города Екатеринбурга",
+      img: "img2",
+      linkText: "Посмотреть Проекты",
+      alt: "Логотоп компании"
+    },
+  ]
+
+section.partners-list
+  .site-content-container
+    .cards-list
+      for item in cardslist
+        +card(item.name, null, item.img, item.linkText, item.alt)(class="cards-list__item card--no-text")

@@ -6,9 +6,6 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export default () => {
   const headings = Array.from(document.querySelectorAll(".js-heading"));
-  const sections = Array.from(document.querySelectorAll(".section:not(:first-child)"));
-  const timeline = gsap.timeline()
-  let headingsArr = [];
 
   headings.forEach(heading => {
     const splitedText = new SplitText(heading, {

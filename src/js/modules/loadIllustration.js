@@ -1,8 +1,10 @@
 import canUseWebp from "../helpers/canUseWebp";
 
 export const loadImages = async () => {
+  const layerContainer = document.querySelector(".js-layer-container");
+  if (!layerContainer) return;
+
   return new Promise((resolve, reject) => {
-    const layerContainer = document.querySelector(".js-layer-container");
     const names = Array.from(document.querySelectorAll(".js-intro-names"));
 
     // подставляем остальные части иллюстрации

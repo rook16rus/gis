@@ -23,6 +23,7 @@
   --font-heading-4: 700 2rem/1 var(--main-ff);
   --font-heading-5: 700 1.2rem/120% var(--main-ff);
   --font-heading-3-mobile: 700 1.8rem/110% var(--main-ff);
+  --font-heading-4-mobile: 700 1.6rem/110% var(--main-ff);
   --font-subheading: 700 1.4rem/1 var(--main-ff);
   --font-menu-item: 500 1.2rem/110% var(--main-ff);
   --font-btn: 600 1.4rem/110% var(--main-ff);
@@ -50,5 +51,17 @@
 @include mq(md) {
   :root {
     --content-padding: 20px;
+  }
+}
+
+@include mq(custom, max, 360) {
+  :root {
+    --content-padding: 16px;
+  }
+}
+
+@include mq(custom, max, 320) {
+  :root {
+    --content-padding: 14px;
   }
 }

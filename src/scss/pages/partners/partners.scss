@@ -1,0 +1,7 @@
+.partners-list {
+  margin-bottom: 12rem;
+
+  @include mq(md) {
+    margin-bottom: 8rem;
+  }
+}

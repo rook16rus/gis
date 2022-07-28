@@ -1,0 +1,46 @@
+.page-intro {
+  margin-bottom: 5.4rem;
+
+  @include mq(sm) {
+    margin-bottom: 4rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(22, 1fr);
+    gap: var(--grid-offset);
+
+    @include mq(sm) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px 0;
+    }
+  }
+
+  &__container-block {
+    &:nth-child(1) {
+      grid-column: 4 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 18 span;
+    }
+
+    @include mq(md) {
+      grid-column: 22 span !important;
+    }
+
+    @include mq(sm) {
+      grid-column: 4 span !important;
+    }
+  }
+
+  &__text {
+    margin-top: 2.4rem;
+    max-width: 37.1rem;
+
+    @include mq(sm) {
+      margin-top: 2rem;
+      max-width: 100%;
+    }
+  }
+}
