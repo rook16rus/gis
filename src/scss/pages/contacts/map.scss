@@ -1,0 +1,25 @@
+.contacts-map {
+  margin-bottom: 12rem;
+
+  @include mq(md) {
+    margin-bottom: 8rem;
+  }
+
+  &__map {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 80rem;
+    background-color: var(--color-support);
+    border-radius: 3.2rem;
+
+    @include mq(md) {
+      height: 54rem;
+    }
+
+    @include mq(sm) {
+      height: 22rem;
+      border-radius: 2rem;
+    }
+  }
+}
