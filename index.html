@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#F0FDFF">
     <title>Главная | ГИС ГИС</title>
-    <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.1.2">
+    <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.1.4">
   </head>
   <body class="page-home">
     <div class="preloader">
@@ -97,13 +97,15 @@
             </button>
             <button class="button mobile-menu__btn"><span class="button__text">Проекты</span>
             </button>
-            <button class="button mobile-menu__btn"><span class="button__text">Связаться</span>
-            </button>
+            <a class="button mobile-menu__btn"><span class="button__text">Связаться</span><span class="button__right-icon-wrapper"><svg class="icon icon-chat button__right-icon" width="14" height="10"><use xlink:href="assets/images/sprites/sprite-mono.svg#chat"></use></svg></span>
+            </a>
           </div>
         </div>
       </div>
 
       <main class="page-main main">
+        <a class="button intro__mobile-btn" href="tel:+7900000000"><span class="button__text">Связаться</span><span class="button__right-icon-wrapper"><svg class="icon icon-chat button__right-icon" width="14" height="10"><use xlink:href="assets/images/sprites/sprite-mono.svg#chat"></use></svg></span>
+        </a>
         <section class="intro section">
           <img class="intro__cloud" src="assets/images/intro/cloud.png" alt="Облака">
           <img class="intro__cloud" src="assets/images/intro/cloud.png" alt="Облака">
@@ -451,7 +453,7 @@
             </div>
           </div>
         </section>
-        <section class="section" id="pannel">
+        <section class="about section" id="pannel">
           <div class="site-ticker" style="--ticker-speed:20s;">
             <div class="site-ticker__item" style="background-image:url(assets/images/ticker-one.svg);"></div>
             <div class="site-ticker__item" style="background-image:url(assets/images/ticker-one.svg);"></div>
@@ -462,7 +464,7 @@
                 <h2 class="site-heading about__heading js-heading">колоссальный опыт на&nbsp;крупных проектах</h2>
               </div>
               <div class="about__heading-container-block">
-                <div class="about__heading-text site-main-text">
+                <div class="about__heading-text site-main-text js-fade-in" data-intersection-ratio="0.8">
                   <p>Cпециализируемся на внедрении геоинформационных систем для решения задач государственного и муниципального управления.</p>
                 </div>
                 <button class="button button--is-iconed"><span class="button__icon-wrapper"><svg class="icon icon-arrow-right button__icon" width="20" height="20"><use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use></svg></span><span class="button__text">о компании</span>
@@ -992,6 +994,6 @@
     </div>
 
   </body>
-  <script src="assets/js/main.js?v=0.0.1.2"></script>
-  <script src="assets/js/backend.js?v=0.0.1.2"></script>
+  <script src="assets/js/main.js?v=0.0.1.4"></script>
+  <script src="assets/js/backend.js?v=0.0.1.4"></script>
 </html>
