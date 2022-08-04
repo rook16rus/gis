@@ -73,8 +73,13 @@
       </header>
       <div class="mobile-menu js-menu">
         <div class="site-container mobile-menu__container">
-          <button class="mobile-menu__close-btn js-close-menu"><span></span><span></span>
-          </button>
+          <div class="mobile-menu__heading-container">
+            <a class="mobile-menu__logo" href="/">
+              <img src="assets/images/logo_white.svg" alt="Логотип Компании">
+            </a>
+            <button class="mobile-menu__close-btn js-close-menu"><span></span><span></span>
+            </button>
+          </div>
           <ul class="mobile-menu__list">
             <li class="mobile-menu__item">
               <a class="mobile-menu__link" href="/">О компании</a>
@@ -107,9 +112,9 @@
         <section class="page-intro-block section">
           <div class="site-container">
             <div class="page-intro-block__container lazyload" data-bg="assets/images/page-intro-block/img-bg.jpg"><span class="page-intro-block__legend">2021 - наст. время</span>
-              <h1 class="page-intro-block__heading site-heading">Единая геоинформационная система администрации Екатеринбурга</h1>
+              <h1 class="page-intro-block__heading site-heading">Единая геоинформацион<br>ная система администрации Екатеринбурга</h1>
               <div class="page-intro-block__btns">
-                <button class="button button--is-transparent"><span class="button__text">Заказать подобный проект</span>
+                <button class="button button--is-transparent page-intro-block__btn"><span class="button__text">Заказать подобный проект</span>
                 </button>
                 <a class="page-intro-block__link" href="/"><span class="page-intro-block__link-text">Разработано совместно с&nbsp;Вендор</span>
                   <div class="page-intro-block__link-icon-wrapper">
@@ -135,21 +140,24 @@
             </div>
           </div>
         </section>
-        <section class="page-info-numbers section">
+        <section class="page-info-numbers section js-page-info-numbers-parent">
           <div class="site-content-container">
             <div class="page-info-numbers__container"><span class="site-legend page-info-numbers__legend">Ключевые показатели проекта</span>
-              <div class="page-info-numbers__lsit">
-                <div class="page-info-numbers__item"><span class="page-info-numbers__num">25%</span>
-                  <p class="page-info-numbers__num-text">услуг предоставлено в электронном виде</p>
-                </div>
-                <div class="page-info-numbers__item"><span class="page-info-numbers__num">25</span>
-                  <p class="page-info-numbers__num-text">районов подключено к системе</p>
-                </div>
-                <div class="page-info-numbers__item"><span class="page-info-numbers__num">3</span>
-                  <p class="page-info-numbers__num-text">города подключено к системе</p>
+              <div class="page-info-numbers__lsit swiper js-page-info-numbers">
+                <div class="swiper-wrapper">
+                  <div class="page-info-numbers__item swiper-slide"><span class="page-info-numbers__num">25%</span>
+                    <p class="page-info-numbers__num-text">услуг предоставлено в электронном виде</p>
+                  </div>
+                  <div class="page-info-numbers__item swiper-slide"><span class="page-info-numbers__num">25</span>
+                    <p class="page-info-numbers__num-text">районов подключено к системе</p>
+                  </div>
+                  <div class="page-info-numbers__item swiper-slide"><span class="page-info-numbers__num">3</span>
+                    <p class="page-info-numbers__num-text">города подключено к системе</p>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="site-pagination"></div>
           </div>
         </section>
         <section class="section performed-work">
@@ -207,39 +215,335 @@
             </ul>
           </div>
         </section>
-        <section class="section results">
+        <section class="section results js-tabs-container">
           <div class="site-content-container">
             <div class="results__container">
               <h2 class="results__heading site-heading">Результаты работ</h2>
               <div class="results__nav">
                 <label class="results__nav-item">
-                  <input class="visually-hidden results__nav-item-btn" type="radio" name="year" value="2020"><span class="results__nav-item-text">2020</span>
+                  <input class="visually-hidden results__nav-item-btn js-tab" type="radio" checked="checked" name="year" value="2020"><span class="results__nav-item-text">2020</span>
                 </label>
                 <label class="results__nav-item">
-                  <input class="visually-hidden results__nav-item-btn" type="radio" name="year" value="2021"><span class="results__nav-item-text">2021</span>
+                  <input class="visually-hidden results__nav-item-btn js-tab" type="radio" name="year" value="2021"><span class="results__nav-item-text">2021</span>
                 </label>
                 <label class="results__nav-item">
-                  <input class="visually-hidden results__nav-item-btn" type="radio" name="year" value="2022"><span class="results__nav-item-text">2022</span>
+                  <input class="visually-hidden results__nav-item-btn js-tab" type="radio" name="year" value="2022"><span class="results__nav-item-text">2022</span>
                 </label>
                 <label class="results__nav-item">
-                  <input class="visually-hidden results__nav-item-btn" type="radio" name="year" value="2023"><span class="results__nav-item-text">2023</span>
+                  <input class="visually-hidden results__nav-item-btn js-tab" type="radio" name="year" value="2023"><span class="results__nav-item-text">2023</span>
                 </label>
               </div>
-              <div class="results__content">
-                <div class="results__content-accordion">
+              <div class="results__content js-tab-content mod-show" data-content="2020">
+                <div class="results__content-accordion js-accordion">
                   <div class="results__content-accordion-block">
                     <div class="results__content-accordion-heading">Работы октябрь-декабрь 2020 года</div>
                   </div>
-                  <div class="results__content-accordion-block">
-                    <div class="results__content-accordion-text"></div>
+                  <div class="results__content-accordion-block js-drop-menu-container">
+                    <div class="results__content-accordion-text">
+                      <ul>
+                        <li>
+                          <p>Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями</p>
+                        </li>
+                        <li>
+                          <p>Установлено программное обеспечение ЕГИС</p>
+                        </li>
+                        <li>
+                          <p>Проведена миграция данных в ЕГИС:</p>
+                          <ul>
+                            <li>Генеральный план города Екатеринбурга</li>
+                            <li>Правила землепользования и застройки=</li>
+                            <li>Материалы проектов планировки и межевания территории</li>
+                            <li>Сведения ЕГРН</li>
+                            <li>Материалы адресного плана</li>
+                            <li>Исходно-разрешительная документация с привязкой к земельным участкам</li>
+                            <li>Зоны особого регулирования</li>
+                            <li>Объекты культурного наследия</li>
+                            <li>Ортофотоплан</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p>Проведен инструктаж пользователей</p>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="results__content-accordion-block"></div>
+                  <div class="results__content-accordion-block">
+                    <button class="results__content-accordion-btn js-drop-menu-btn" aria-label="Кнопка открытия/закрытия аккордиона"></button>
+                  </div>
+                </div>
+                <div class="results__content-accordion js-accordion">
+                  <div class="results__content-accordion-block">
+                    <div class="results__content-accordion-heading">Работы октябрь-декабрь 2020 года</div>
+                  </div>
+                  <div class="results__content-accordion-block js-drop-menu-container">
+                    <div class="results__content-accordion-text">
+                      <ul>
+                        <li>
+                          <p>Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями</p>
+                        </li>
+                        <li>
+                          <p>Установлено программное обеспечение ЕГИС</p>
+                        </li>
+                        <li>
+                          <p>Проведена миграция данных в ЕГИС:</p>
+                          <ul>
+                            <li>Генеральный план города Екатеринбурга</li>
+                            <li>Правила землепользования и застройки=</li>
+                            <li>Материалы проектов планировки и межевания территории</li>
+                            <li>Сведения ЕГРН</li>
+                            <li>Материалы адресного плана</li>
+                            <li>Исходно-разрешительная документация с привязкой к земельным участкам</li>
+                            <li>Зоны особого регулирования</li>
+                            <li>Объекты культурного наследия</li>
+                            <li>Ортофотоплан</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p>Проведен инструктаж пользователей</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="results__content-accordion-block">
+                    <button class="results__content-accordion-btn js-drop-menu-btn" aria-label="Кнопка открытия/закрытия аккордиона"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="results__content js-tab-content" data-content="2021">
+                <div class="results__content-accordion js-accordion">
+                  <div class="results__content-accordion-block">
+                    <div class="results__content-accordion-heading">Работы октябрь-декабрь 2021 года</div>
+                  </div>
+                  <div class="results__content-accordion-block js-drop-menu-container">
+                    <div class="results__content-accordion-text">
+                      <ul>
+                        <li>
+                          <p>Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями</p>
+                        </li>
+                        <li>
+                          <p>Установлено программное обеспечение ЕГИС</p>
+                        </li>
+                        <li>
+                          <p>Проведена миграция данных в ЕГИС:</p>
+                          <ul>
+                            <li>Генеральный план города Екатеринбурга</li>
+                            <li>Правила землепользования и застройки=</li>
+                            <li>Материалы проектов планировки и межевания территории</li>
+                            <li>Сведения ЕГРН</li>
+                            <li>Материалы адресного плана</li>
+                            <li>Исходно-разрешительная документация с привязкой к земельным участкам</li>
+                            <li>Зоны особого регулирования</li>
+                            <li>Объекты культурного наследия</li>
+                            <li>Ортофотоплан</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p>Проведен инструктаж пользователей</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="results__content-accordion-block">
+                    <button class="results__content-accordion-btn js-drop-menu-btn" aria-label="Кнопка открытия/закрытия аккордиона"></button>
+                  </div>
+                </div>
+                <div class="results__content-accordion js-accordion">
+                  <div class="results__content-accordion-block">
+                    <div class="results__content-accordion-heading">Работы октябрь-декабрь 2021 года</div>
+                  </div>
+                  <div class="results__content-accordion-block js-drop-menu-container">
+                    <div class="results__content-accordion-text">
+                      <ul>
+                        <li>
+                          <p>Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями</p>
+                        </li>
+                        <li>
+                          <p>Установлено программное обеспечение ЕГИС</p>
+                        </li>
+                        <li>
+                          <p>Проведена миграция данных в ЕГИС:</p>
+                          <ul>
+                            <li>Генеральный план города Екатеринбурга</li>
+                            <li>Правила землепользования и застройки=</li>
+                            <li>Материалы проектов планировки и межевания территории</li>
+                            <li>Сведения ЕГРН</li>
+                            <li>Материалы адресного плана</li>
+                            <li>Исходно-разрешительная документация с привязкой к земельным участкам</li>
+                            <li>Зоны особого регулирования</li>
+                            <li>Объекты культурного наследия</li>
+                            <li>Ортофотоплан</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p>Проведен инструктаж пользователей</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="results__content-accordion-block">
+                    <button class="results__content-accordion-btn js-drop-menu-btn" aria-label="Кнопка открытия/закрытия аккордиона"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="results__content js-tab-content" data-content="2022">
+                <div class="results__content-accordion js-accordion">
+                  <div class="results__content-accordion-block">
+                    <div class="results__content-accordion-heading">Работы октябрь-декабрь 2022 года</div>
+                  </div>
+                  <div class="results__content-accordion-block js-drop-menu-container">
+                    <div class="results__content-accordion-text">
+                      <ul>
+                        <li>
+                          <p>Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями</p>
+                        </li>
+                        <li>
+                          <p>Установлено программное обеспечение ЕГИС</p>
+                        </li>
+                        <li>
+                          <p>Проведена миграция данных в ЕГИС:</p>
+                          <ul>
+                            <li>Генеральный план города Екатеринбурга</li>
+                            <li>Правила землепользования и застройки=</li>
+                            <li>Материалы проектов планировки и межевания территории</li>
+                            <li>Сведения ЕГРН</li>
+                            <li>Материалы адресного плана</li>
+                            <li>Исходно-разрешительная документация с привязкой к земельным участкам</li>
+                            <li>Зоны особого регулирования</li>
+                            <li>Объекты культурного наследия</li>
+                            <li>Ортофотоплан</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p>Проведен инструктаж пользователей</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="results__content-accordion-block">
+                    <button class="results__content-accordion-btn js-drop-menu-btn" aria-label="Кнопка открытия/закрытия аккордиона"></button>
+                  </div>
+                </div>
+                <div class="results__content-accordion js-accordion">
+                  <div class="results__content-accordion-block">
+                    <div class="results__content-accordion-heading">Работы октябрь-декабрь 2022 года</div>
+                  </div>
+                  <div class="results__content-accordion-block js-drop-menu-container">
+                    <div class="results__content-accordion-text">
+                      <ul>
+                        <li>
+                          <p>Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями</p>
+                        </li>
+                        <li>
+                          <p>Установлено программное обеспечение ЕГИС</p>
+                        </li>
+                        <li>
+                          <p>Проведена миграция данных в ЕГИС:</p>
+                          <ul>
+                            <li>Генеральный план города Екатеринбурга</li>
+                            <li>Правила землепользования и застройки=</li>
+                            <li>Материалы проектов планировки и межевания территории</li>
+                            <li>Сведения ЕГРН</li>
+                            <li>Материалы адресного плана</li>
+                            <li>Исходно-разрешительная документация с привязкой к земельным участкам</li>
+                            <li>Зоны особого регулирования</li>
+                            <li>Объекты культурного наследия</li>
+                            <li>Ортофотоплан</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p>Проведен инструктаж пользователей</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="results__content-accordion-block">
+                    <button class="results__content-accordion-btn js-drop-menu-btn" aria-label="Кнопка открытия/закрытия аккордиона"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="results__content js-tab-content" data-content="2023">
+                <div class="results__content-accordion js-accordion">
+                  <div class="results__content-accordion-block">
+                    <div class="results__content-accordion-heading">Работы октябрь-декабрь 2023 года</div>
+                  </div>
+                  <div class="results__content-accordion-block js-drop-menu-container">
+                    <div class="results__content-accordion-text">
+                      <ul>
+                        <li>
+                          <p>Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями</p>
+                        </li>
+                        <li>
+                          <p>Установлено программное обеспечение ЕГИС</p>
+                        </li>
+                        <li>
+                          <p>Проведена миграция данных в ЕГИС:</p>
+                          <ul>
+                            <li>Генеральный план города Екатеринбурга</li>
+                            <li>Правила землепользования и застройки=</li>
+                            <li>Материалы проектов планировки и межевания территории</li>
+                            <li>Сведения ЕГРН</li>
+                            <li>Материалы адресного плана</li>
+                            <li>Исходно-разрешительная документация с привязкой к земельным участкам</li>
+                            <li>Зоны особого регулирования</li>
+                            <li>Объекты культурного наследия</li>
+                            <li>Ортофотоплан</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p>Проведен инструктаж пользователей</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="results__content-accordion-block">
+                    <button class="results__content-accordion-btn js-drop-menu-btn" aria-label="Кнопка открытия/закрытия аккордиона"></button>
+                  </div>
+                </div>
+                <div class="results__content-accordion js-accordion">
+                  <div class="results__content-accordion-block">
+                    <div class="results__content-accordion-heading">Работы октябрь-декабрь 2023 года</div>
+                  </div>
+                  <div class="results__content-accordion-block js-drop-menu-container">
+                    <div class="results__content-accordion-text">
+                      <ul>
+                        <li>
+                          <p>Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями</p>
+                        </li>
+                        <li>
+                          <p>Установлено программное обеспечение ЕГИС</p>
+                        </li>
+                        <li>
+                          <p>Проведена миграция данных в ЕГИС:</p>
+                          <ul>
+                            <li>Генеральный план города Екатеринбурга</li>
+                            <li>Правила землепользования и застройки=</li>
+                            <li>Материалы проектов планировки и межевания территории</li>
+                            <li>Сведения ЕГРН</li>
+                            <li>Материалы адресного плана</li>
+                            <li>Исходно-разрешительная документация с привязкой к земельным участкам</li>
+                            <li>Зоны особого регулирования</li>
+                            <li>Объекты культурного наследия</li>
+                            <li>Ортофотоплан</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p>Проведен инструктаж пользователей</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="results__content-accordion-block">
+                    <button class="results__content-accordion-btn js-drop-menu-btn" aria-label="Кнопка открытия/закрытия аккордиона"></button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section class="section presentation">
+          <div class="site-ticker js-marquee" style="--ticker-speed:20s;">
+            <div class="site-ticker__item js-marquee-child" style="background-image:url(assets/images/ticker-four2.svg);"></div>
+          </div>
           <div class="site-content-container">
             <div class="presentation__container">
               <div class="presentation__img-wrapper">
