@@ -162,6 +162,13 @@
       left: 50%;
       transform: translateX(-50%) rotate(40deg);
     }
+
+    @include mq(sm) {
+      bottom: -15rem;
+      height: auto;
+      width: 100%;
+      transform: translateX(-50%) rotate(146deg);
+    }
   }
 
   &__item-img {

@@ -20,6 +20,13 @@ import firstLoadAnimation from './modules/firstLoadAnimation';
 import validation from './modules/validation';
 import initSelects from './modules/selects';
 import projectsFilter from './modules/projectsFilter';
+import maps from './modules/map';
+import inputmask from './modules/inputmask';
+import accordion from './modules/accordion';
+import blocksReveal from './modules/fadeInBlocks';
+import marquee from './modules/marquee';
+import tabs from './modules/tabs';
+import numberBlockSlider from './modules/numberBlockSlider';
 
 const descktop = window.matchMedia("(min-width: 992px)");
 
@@ -42,6 +49,10 @@ window.addEventListener("load", () => {
 documenReady(() => {
   window.gis_API = {};
 
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
+
   lazyIMages();
   initModal();
   activeInput();
@@ -57,4 +68,11 @@ documenReady(() => {
   validation();
   initSelects();
   projectsFilter();
+  maps();
+  inputmask();
+  accordion();
+  blocksReveal();
+  marquee();
+  tabs();
+  numberBlockSlider();
 });

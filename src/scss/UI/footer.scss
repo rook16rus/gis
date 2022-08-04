@@ -9,6 +9,10 @@
     right: 0;
     bottom: 0;
     pointer-events: none;
+
+    @include mq(sm) {
+      height: 69%;
+    }
   }
 
   &__container {
@@ -99,6 +103,21 @@
     font: var(--font-text-sm);
     font-stretch: 140%;
     font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+
+    &._mobile {
+      display: none;
+      margin-bottom: 2rem;
+
+      @include mq(sm) {
+        display: block;
+      }
+    }
+
+    &._descktop {
+      @include mq(sm) {
+        display: none;
+      }
+    }
 
     &:nth-last-of-type(1) {
       margin-bottom: 0;

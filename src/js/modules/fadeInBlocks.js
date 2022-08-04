@@ -15,7 +15,7 @@ export default function blocksReveal() {
   };
   const observer = new IntersectionObserver(callback, options);
 
-  const blocks = Array.from(document.querySelectorAll('.section'));
+  const blocks = Array.from(document.querySelectorAll('.js-fade-in'));
 
   blocks.forEach(block => observer.observe(block));
 }

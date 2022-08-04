@@ -1,10 +1,25 @@
 -
   let nav_arr = [
-    "О компании",
-    "Карьера",
-    "Партнеры",
-    "Клиенты",
-    "Контакты",
+    {
+      text: "О компании",
+      name: ""
+    },
+    {
+      text: "Карьера",
+      name: "career"
+    },
+    {
+      text: "Партнеры",
+      name: "partners"
+    },
+    {
+      text: "Клиенты",
+      name: "clients"
+    },
+    {
+      text: "Контакты",
+      name: "contacts"
+    }
   ]
 
 header.header.fix-blocks
@@ -19,7 +34,7 @@ header.header.fix-blocks
       nav.nav.header__nav
         ul.nav__list
           for item in nav_arr
-            li.nav__item: a.nav__link(href="/")= item
+            li.nav__item: a.nav__link(href="/" class={'nav__link--active': page === item.name})= item.text
       button.header__burger-btn.js-open-menu
         span
         span

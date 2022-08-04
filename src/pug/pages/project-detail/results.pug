@@ -1,0 +1,79 @@
+-
+  const itemsResult = [
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+  ]
+
+section.section.results.js-tabs-container
+  .site-content-container
+    .results__container
+      h2.results__heading.site-heading Результаты работ
+      .results__nav
+        for item, index in itemsResult
+          - firtst = index === 0 ? "checked" : null
+          label.results__nav-item
+            input(type="radio" checked=firtst name="year" value=item class="visually-hidden" class="results__nav-item-btn js-tab")
+            span.results__nav-item-text= item
+      for item, index in itemsResult
+        - first = index === 0 ? "mod-show" : ""
+        .results__content.js-tab-content(class=first data-content=item)
+          .results__content-accordion.js-accordion
+            .results__content-accordion-block
+              .results__content-accordion-heading Работы октябрь-декабрь #{item} года
+            .results__content-accordion-block.js-drop-menu-container
+              .results__content-accordion-text
+                ul
+                  li
+                    p
+                      | Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями
+                  li
+                    p
+                      | Установлено программное обеспечение ЕГИС
+                  li
+                    p
+                      | Проведена миграция данных в ЕГИС:
+                    ul
+                      li Генеральный план города Екатеринбурга
+                      li Правила землепользования и застройки=
+                      li Материалы проектов планировки и межевания территории
+                      li Сведения ЕГРН
+                      li Материалы адресного плана
+                      li Исходно-разрешительная документация с привязкой к земельным участкам
+                      li Зоны особого регулирования
+                      li Объекты культурного наследия
+                      li Ортофотоплан
+                  li
+                    p Проведен инструктаж пользователей
+            .results__content-accordion-block
+              button.results__content-accordion-btn.js-drop-menu-btn(aria-label="Кнопка открытия/закрытия аккордиона")
+          .results__content-accordion.js-accordion
+            .results__content-accordion-block
+              .results__content-accordion-heading Работы октябрь-декабрь #{item} года
+            .results__content-accordion-block.js-drop-menu-container
+              .results__content-accordion-text
+                ul
+                  li
+                    p
+                      | Проведено обследование Департамента архитектуры, градостроительства и регулирования земельных отношений с подведомственными учреждениями
+                  li
+                    p
+                      | Установлено программное обеспечение ЕГИС
+                  li
+                    p
+                      | Проведена миграция данных в ЕГИС:
+                    ul
+                      li Генеральный план города Екатеринбурга
+                      li Правила землепользования и застройки=
+                      li Материалы проектов планировки и межевания территории
+                      li Сведения ЕГРН
+                      li Материалы адресного плана
+                      li Исходно-разрешительная документация с привязкой к земельным участкам
+                      li Зоны особого регулирования
+                      li Объекты культурного наследия
+                      li Ортофотоплан
+                  li
+                    p Проведен инструктаж пользователей
+            .results__content-accordion-block
+              button.results__content-accordion-btn.js-drop-menu-btn(aria-label="Кнопка открытия/закрытия аккордиона")

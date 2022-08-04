@@ -3,6 +3,10 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+//
+// ЕСТЬ ДРУГОЙ JS ФАЙЛ ДЛЯ МОБИЛКИ indexIntroMobile.js
+//
+
 export default () => {
   const DURATION = 0.5;
   const layer = document.querySelector(".intro-layer");
@@ -25,6 +29,8 @@ export default () => {
     onReverseComplete: () => document.querySelector(".intro-layer").classList.add("is-locked"),
   });
 
+  gsap.set(".about", {opacity: 0})
+
   ScrollTrigger.matchMedia({
     "(min-width: 1537px)": function () {
       timeline
@@ -35,6 +41,7 @@ export default () => {
         }, `-=${DURATION}`)
         .to(".intro__heading-text-wrapper", { opacity: 1, duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
         .to(".intro__cloud", { opacity: 0, visibility: "hidden", duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
+        .to(".about", {opacity: 1, duration: DURATION, ease: "power1.out"}, `-=${DURATION}`)
     },
     "(max-width: 1536px)": function () {
       timeline
@@ -45,6 +52,7 @@ export default () => {
         }, `-=${DURATION}`)
         .to(".intro__heading-text-wrapper", { opacity: 1, duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
         .to(".intro__cloud", { opacity: 0, visibility: "hidden", duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
+        .to(".about", {opacity: 1, duration: DURATION, ease: "power1.out"}, `-=${DURATION}`)
     },
     "all": function () {
 

@@ -92,10 +92,20 @@
 
   &__small-text {
     font: var(--font-text-md);
-    color: var(--color-support);
+    color: var(--color-text-support);
     font-stretch: 140%;
     font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
     max-width: 30.8rem;
+
+    &._blue {
+      color: var(--color-main);
+
+      &:hover {
+        color: var(--color-support);
+      }
+    }
+
+
 
     @include mq(sm) {
       font: var(--font-text-sm);

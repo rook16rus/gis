@@ -11,5 +11,9 @@
     text-transform: uppercase;
     font-stretch: 140%;
     font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 500, 'XOPQ' 96, 'YOPQ' 107, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 618, 'opsz' 105;
+
+    &--active {
+      color: var(--color-main);
+    }
   }
 }

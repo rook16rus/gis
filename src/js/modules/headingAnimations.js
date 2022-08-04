@@ -17,7 +17,7 @@ export default () => {
     gsap.set(splitedText.lines, { overflow: 'hidden' });
 
     gsap.to(splitedText.chars, {
-      yPercent: 0, duration: 0.2, ease: "Power.out",
+      yPercent: 0, duration: 0.4, ease: "Power.out",
       scrollTrigger: {
         trigger: heading,
         start: "top 80%"

@@ -1,0 +1,25 @@
+-
+  const itemsAcc = [
+    "Сбор,  анализ и загрузка данных муниципальных образований",
+    "Подготовка распоряжений по утверждению охранных зон газораспределительных сетей",
+    "Взаимодействие с ЕГРН по СМЭВ",
+    "Автоматизация муниципальных услуг"
+  ]
+
+section.section.performed-work
+  .site-content-container.performed-work__container
+    h2.site-heading.performed-work__heading Виды выполненных работ
+    ul.performed-work__list
+      for item in itemsAcc
+        li.performed-work__item
+          .performed-work__item-col
+          .performed-work__item-col.performed-work-accordion.js-accordion
+            button.performed-work-accordion__head.js-drop-menu-btn
+              span.performed-work-accordion__heading= item
+              span.performed-work-accordion__circle
+            .performed-work-accordion__body.js-drop-menu-container
+              .performed-work-accordion__body-inner
+                p
+                  | Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+                  | Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                  | Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.

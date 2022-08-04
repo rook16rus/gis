@@ -75,6 +75,8 @@
 
   &__text {
     a {
+      text-decoration: underline;
+
       @include mq(md) {
         display: inline-block;
         margin-top: 4rem;

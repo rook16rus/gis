@@ -9,9 +9,12 @@
 
 .mobile-menu.js-menu
   .site-container.mobile-menu__container
-    button.mobile-menu__close-btn.js-close-menu
-      span
-      span
+    .mobile-menu__heading-container
+      a(href="/" class="mobile-menu__logo")
+        img(src="assets/images/logo_white.svg" alt="Логотип Компании")
+      button.mobile-menu__close-btn.js-close-menu
+        span
+        span
     ul.mobile-menu__list
       for item in list
         li.mobile-menu__item
@@ -19,4 +22,4 @@
     .mobile-menu__btns
       +button("Услуги", null, null, null)(class="mobile-menu__btn")
       +button("Проекты", null, null, null)(class="mobile-menu__btn")
-      +button("Связаться", null, null, null)(class="mobile-menu__btn")
+      +button("Связаться", null, null, null, "chat", "link")(class="mobile-menu__btn")

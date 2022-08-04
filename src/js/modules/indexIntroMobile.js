@@ -17,11 +17,13 @@ export default () => {
       trigger: ".intro",
       pin: true,
       start: "top 10%",
-      end: "bottom 45%",
+      end: "bottom 25%",
     },
     onComplete: () => document.querySelector(".intro-layer").classList.remove("is-locked"),
     onReverseComplete: () => document.querySelector(".intro-layer").classList.add("is-locked"),
   });
+
+  gsap.set(".about", {opacity: 0})
 
   timeline
     .to(".intro__text-mobile-wrapper", { opacity: 0, duration: DURATION, ease: "power1.out" })
@@ -31,6 +33,8 @@ export default () => {
     }, `-=${DURATION}`)
     .to(".intro__select", { opacity: 1, duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
     .to(".intro__cloud", { opacity: 0, visibility: "hidden", duration: DURATION, ease: "power1.out", }, `-=${DURATION}`)
+    .to(".about", {opacity: 1, duration: DURATION, ease: "power1.out"}, `-=${DURATION}`)
+    .to(".intro__mobile-btn", {opacity: 0, visibility: "hidden", duration: DURATION, ease: "power1.out"}, `-=${DURATION}`)
 
   window.addEventListener("scroll", () => {
     let scrollDistance = window.scrollY;
