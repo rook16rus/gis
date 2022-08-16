@@ -15,7 +15,7 @@
     <title>Клиенты | ГИС ГИС</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.1.4">
   </head>
-  <body class="disable-scroll">
+  <body>
     <div class="preloader">
       <div class="preloader__img">
         <svg width="201" height="39" viewBox="0 0 201 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,11 +98,11 @@
             </li>
           </ul>
           <div class="mobile-menu__btns">
-            <a class="button mobile-menu__btn" href="/"><span class="button__text">Услуги</span>
-            </a>
-            <a class="button mobile-menu__btn" href="/"><span class="button__text">Проекты</span>
-            </a>
-            <a class="button mobile-menu__btn" href="/"><span class="button__text">Связаться</span><span class="button__right-icon-wrapper"><svg class="icon icon-chat button__right-icon" width="14" height="10"><use xlink:href="assets/images/sprites/sprite-mono.svg#chat"></use></svg></span>
+            <button class="button mobile-menu__btn"><span class="button__text">Услуги</span>
+            </button>
+            <button class="button mobile-menu__btn"><span class="button__text">Проекты</span>
+            </button>
+            <a class="button mobile-menu__btn"><span class="button__text">Связаться</span><span class="button__right-icon-wrapper"><svg class="icon icon-chat button__right-icon" width="14" height="10"><use xlink:href="assets/images/sprites/sprite-mono.svg#chat"></use></svg></span>
             </a>
           </div>
         </div>
@@ -128,7 +128,7 @@
             <div class="cards-list">
               <div class="card cards-list__item card--no-text">
                 <div class="card__img-wrapper">
-                  <img class="lazyload" src="#" data-src="assets/images/cards/img2.jpg" alt="Логотоп компании">
+                  <img src="assets/images/cards/img2.jpg" alt="Логотоп компании">
                 </div>
                 <a class="card__name" href="">Государственное казенное учреждение «Центр цифровой трансформации Республики Татарстан»</a>
                 <p class="card__text"></p>
@@ -140,7 +140,7 @@
               </div>
               <div class="card cards-list__item card--no-text">
                 <div class="card__img-wrapper">
-                  <img class="lazyload" src="#" data-src="assets/images/cards/img2.jpg" alt="Логотоп компании">
+                  <img src="assets/images/cards/img2.jpg" alt="Логотоп компании">
                 </div>
                 <a class="card__name" href="">Министерство информатизации и связи Удмуртской Республики</a>
                 <p class="card__text"></p>
@@ -152,7 +152,7 @@
               </div>
               <div class="card cards-list__item card--no-text">
                 <div class="card__img-wrapper">
-                  <img class="lazyload" src="#" data-src="assets/images/cards/img2.jpg" alt="Логотоп компании">
+                  <img src="assets/images/cards/img2.jpg" alt="Логотоп компании">
                 </div>
                 <a class="card__name" href="">Министерство информационных технологий, связи и цифрового развития Челябинской области</a>
                 <p class="card__text"></p>
@@ -164,7 +164,7 @@
               </div>
               <div class="card cards-list__item card--no-text">
                 <div class="card__img-wrapper">
-                  <img class="lazyload" src="#" data-src="assets/images/cards/img2.jpg" alt="Логотоп компании">
+                  <img src="assets/images/cards/img2.jpg" alt="Логотоп компании">
                 </div>
                 <a class="card__name" href="">Администрация города Екатеринбурга</a>
                 <p class="card__text"></p>
@@ -178,10 +178,10 @@
           </div>
         </section>
         <section class="contact-us">
-          <div class="site-ticker js-marquee" data-speed="0.9">
+          <div class="site-ticker js-marquee" style="--ticker-speed:20s;">
             <div class="site-ticker__item js-marquee-child" style="background-image:url(assets/images/ticker-three.svg);"></div>
           </div>
-          <div class="site-content-container js-fade-in">
+          <div class="site-content-container">
             <div class="contact-us__container">
               <div class="contact-us__block">
                 <h2 class="site-heading contact-us__heading">Свяжитесь с нами</h2>

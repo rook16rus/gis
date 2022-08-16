@@ -15,7 +15,7 @@
     <title>Детальная проекта | ГИС ГИС</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.1.4">
   </head>
-  <body class="disable-scroll">
+  <body>
     <div class="preloader">
       <div class="preloader__img">
         <svg width="201" height="39" viewBox="0 0 201 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@
             <nav class="nav header__nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a class="nav__link" href="/">О компании</a>
+                  <a class="nav__link nav__link--active" href="/">О компании</a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="/">Карьера</a>
@@ -98,11 +98,11 @@
             </li>
           </ul>
           <div class="mobile-menu__btns">
-            <a class="button mobile-menu__btn" href="/"><span class="button__text">Услуги</span>
-            </a>
-            <a class="button mobile-menu__btn" href="/"><span class="button__text">Проекты</span>
-            </a>
-            <a class="button mobile-menu__btn" href="/"><span class="button__text">Связаться</span><span class="button__right-icon-wrapper"><svg class="icon icon-chat button__right-icon" width="14" height="10"><use xlink:href="assets/images/sprites/sprite-mono.svg#chat"></use></svg></span>
+            <button class="button mobile-menu__btn"><span class="button__text">Услуги</span>
+            </button>
+            <button class="button mobile-menu__btn"><span class="button__text">Проекты</span>
+            </button>
+            <a class="button mobile-menu__btn"><span class="button__text">Связаться</span><span class="button__right-icon-wrapper"><svg class="icon icon-chat button__right-icon" width="14" height="10"><use xlink:href="assets/images/sprites/sprite-mono.svg#chat"></use></svg></span>
             </a>
           </div>
         </div>
@@ -125,7 +125,7 @@
             </div>
           </div>
         </section>
-        <section class="section page-info-block js-fade-in">
+        <section class="section page-info-block">
           <div class="site-content-container page-info-block__container">
             <div class="page-info-block__col"><span class="page-info-block__legend site-legend">Задача проекта</span>
               <h2 class="page-info-block__heading">Организация единого банка пространственных данных о территории города и планах её развития, доступного для всех подразделений Администрации</h2>
@@ -140,7 +140,7 @@
             </div>
           </div>
         </section>
-        <section class="page-info-numbers section js-page-info-numbers-parent js-fade-in">
+        <section class="page-info-numbers section js-page-info-numbers-parent">
           <div class="site-content-container">
             <div class="page-info-numbers__container"><span class="site-legend page-info-numbers__legend">Ключевые показатели проекта</span>
               <div class="page-info-numbers__lsit swiper js-page-info-numbers">
@@ -160,14 +160,14 @@
             <div class="site-pagination"></div>
           </div>
         </section>
-        <section class="section performed-work js-fade-in">
+        <section class="section performed-work">
           <div class="site-content-container performed-work__container">
             <h2 class="site-heading performed-work__heading">Виды выполненных работ</h2>
             <ul class="performed-work__list">
               <li class="performed-work__item">
                 <div class="performed-work__item-col"></div>
                 <div class="performed-work__item-col performed-work-accordion js-accordion">
-                  <button class="performed-work-accordion__head"><span class="performed-work-accordion__heading">Сбор, анализ и загрузка данных муниципальных образований</span><span class="performed-work-accordion__circle js-drop-menu-btn"></span>
+                  <button class="performed-work-accordion__head js-drop-menu-btn"><span class="performed-work-accordion__heading">Сбор, анализ и загрузка данных муниципальных образований</span><span class="performed-work-accordion__circle"></span>
                   </button>
                   <div class="performed-work-accordion__body js-drop-menu-container">
                     <div class="performed-work-accordion__body-inner">
@@ -179,7 +179,7 @@
               <li class="performed-work__item">
                 <div class="performed-work__item-col"></div>
                 <div class="performed-work__item-col performed-work-accordion js-accordion">
-                  <button class="performed-work-accordion__head"><span class="performed-work-accordion__heading">Подготовка распоряжений по утверждению охранных зон газораспределительных сетей</span><span class="performed-work-accordion__circle js-drop-menu-btn"></span>
+                  <button class="performed-work-accordion__head js-drop-menu-btn"><span class="performed-work-accordion__heading">Подготовка распоряжений по утверждению охранных зон газораспределительных сетей</span><span class="performed-work-accordion__circle"></span>
                   </button>
                   <div class="performed-work-accordion__body js-drop-menu-container">
                     <div class="performed-work-accordion__body-inner">
@@ -191,7 +191,7 @@
               <li class="performed-work__item">
                 <div class="performed-work__item-col"></div>
                 <div class="performed-work__item-col performed-work-accordion js-accordion">
-                  <button class="performed-work-accordion__head"><span class="performed-work-accordion__heading">Взаимодействие с ЕГРН по СМЭВ</span><span class="performed-work-accordion__circle js-drop-menu-btn"></span>
+                  <button class="performed-work-accordion__head js-drop-menu-btn"><span class="performed-work-accordion__heading">Взаимодействие с ЕГРН по СМЭВ</span><span class="performed-work-accordion__circle"></span>
                   </button>
                   <div class="performed-work-accordion__body js-drop-menu-container">
                     <div class="performed-work-accordion__body-inner">
@@ -203,7 +203,7 @@
               <li class="performed-work__item">
                 <div class="performed-work__item-col"></div>
                 <div class="performed-work__item-col performed-work-accordion js-accordion">
-                  <button class="performed-work-accordion__head"><span class="performed-work-accordion__heading">Автоматизация муниципальных услуг</span><span class="performed-work-accordion__circle js-drop-menu-btn"></span>
+                  <button class="performed-work-accordion__head js-drop-menu-btn"><span class="performed-work-accordion__heading">Автоматизация муниципальных услуг</span><span class="performed-work-accordion__circle"></span>
                   </button>
                   <div class="performed-work-accordion__body js-drop-menu-container">
                     <div class="performed-work-accordion__body-inner">
@@ -215,7 +215,7 @@
             </ul>
           </div>
         </section>
-        <section class="section results js-tabs-container js-fade-in">
+        <section class="section results js-tabs-container">
           <div class="site-content-container">
             <div class="results__container">
               <h2 class="results__heading site-heading">Результаты работ</h2>
@@ -541,11 +541,11 @@
           </div>
         </section>
         <section class="section presentation">
-          <div class="site-ticker js-marquee presentation__ticker" data-speed="0.9">
-            <div class="site-ticker__item js-marquee-child" style="background-image:url(assets/images/ticker-four22.svg);"></div>
+          <div class="site-ticker js-marquee" style="--ticker-speed:20s;">
+            <div class="site-ticker__item js-marquee-child" style="background-image:url(assets/images/ticker-four2.svg);"></div>
           </div>
-          <div class="site-content-container js-fade-in">
-            <div class="presentation__container js-play-video" data-video-url="https://www.youtube.com/watch?v=896mP-oaMcM">
+          <div class="site-content-container">
+            <div class="presentation__container">
               <div class="presentation__img-wrapper">
                 <img class="lazyload presentation__preview" data-src="assets/images/page-intro-block/img-bg.jpg" src="#" alt="">
               </div>
@@ -555,7 +555,7 @@
             </div>
           </div>
         </section>
-        <section class="section client-review js-fade-in">
+        <section class="section client-review">
           <div class="site-content-container">
             <div class="client-review__container lazyload" data-bg="assets/images/client-review/bg.svg">
               <h2 class="site-heading client-review__heading">Отзыв клиента</h2>
@@ -590,10 +590,10 @@
           </div>
         </section>
         <section class="contact-us">
-          <div class="site-ticker js-marquee" data-speed="0.9">
+          <div class="site-ticker js-marquee" style="--ticker-speed:20s;">
             <div class="site-ticker__item js-marquee-child" style="background-image:url(assets/images/ticker-three.svg);"></div>
           </div>
-          <div class="site-content-container js-fade-in">
+          <div class="site-content-container">
             <div class="contact-us__container">
               <div class="contact-us__block">
                 <h2 class="site-heading contact-us__heading">Свяжитесь с нами</h2>
