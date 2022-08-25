@@ -21,6 +21,20 @@
     }
   }
 
+  &__ticker {
+    .site-ticker__item {
+      width: 204.5rem;
+
+      @include mq(md) {
+        width: 153.5rem;
+      }
+
+      @include mq(sm) {
+        width: 114.5rem;
+      }
+    }
+  }
+
   &__heading-container-block {
     &:nth-child(1) {
       grid-column: 12 span;

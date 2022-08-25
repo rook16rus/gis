@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import SplitText from '../../assets/js/gsap-bonus/SplitText';
+import { disableScroll, enableScroll } from "../helpers/disableScroll";
 
 gsap.registerPlugin(SplitText);
 
@@ -9,7 +10,10 @@ export default () => {
   const headingText = document.querySelector(".intro__content-text");
   const layer = document.querySelector(".intro-layer");
   const timeline = gsap.timeline({
-    paused: true
+    paused: true,
+    onComplete: () => {
+      enableScroll();
+    }
   });
 
   if (!heading) return;

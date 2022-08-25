@@ -58,6 +58,11 @@ export default function maps() {
       };
 
       objectManager.add(objectToAdd);
+
+      // mapInstance.layers.add(new ymaps.Layer('https://overpass-api.de/api/map?bbox=48.5616,55.5981,49.6397,55.9357', {
+      //   projection: ymaps.projection.sphericalMercator
+      // }));
+      // mapInstance.copyrights.add('© OpenStreetMap contributors, CC-BY-SA');
     }
   });
 }

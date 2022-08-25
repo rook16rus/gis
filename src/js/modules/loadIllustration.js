@@ -17,13 +17,12 @@ export const loadImages = async () => {
       newImg.setAttribute("alt", "Layer");
       newImg.onload = () => {
         names[i].classList.add("is-loaded");
-
-        layerContainer.append(newImg);
-
-        if (i === 5) {
-          resolve();
-        }
       };
+
+      if (i === 5) {
+        resolve();
+      };
+      layerContainer.append(newImg);
     };
   })
 };

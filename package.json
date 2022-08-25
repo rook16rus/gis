@@ -95,6 +95,7 @@
 		"gsap": "^3.10.4",
 		"inputmask": "^5.0.7",
 		"lazysizes": "^5.3.2",
+		"marquee3000": "^1.1.1",
 		"reset-css": "^5.0.1",
 		"swiper": "^8.3.0",
 		"vanilla-lazyload": "^17.6.1"

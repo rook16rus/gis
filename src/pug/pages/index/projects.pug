@@ -9,7 +9,7 @@ section.completed-projects.section
             | Cпециализируюемся на внедрении геоинформационных систем
             | для решения задач государственного и муниципального управления
       +slider-nav("js-project-btn-prev", "js-project-btn-next")
-    .completed-projects__content.js-project-slider.swiper
+    .completed-projects__content.js-project-slider.swiper.js-fade-in
       .swiper-wrapper
         each i in Array.from(Array(3).keys())
           .swiper-slide.completed-projects__item.lazyload(data-bg="assets/images/projects/bg1.jpg")
@@ -26,5 +26,5 @@ section.completed-projects.section
               .completed-projects__item-info-block
                 span.completed-projects__item-num 25%
                 span.completed-projects__item-small-legend услуг предоставлено в электронном виде
-                +button("подробнее", "button--is-iconed", "arrow-right", "is-white")
+                +button("подробнее", "button--is-iconed", "arrow-right", "is-white", null, "link")(href="#" class="completed-projects__link")
       .site-pagination

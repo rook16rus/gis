@@ -1,0 +1,57 @@
+.small-form {
+  &__container {
+    background-color: var(--color-main-bg);
+    padding: 6.4rem;
+    border-radius: 3.2rem;
+    color: var(--color-white);
+
+    @include mq(sm) {
+      padding: 4rem 2rem;
+      border-radius: 2rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 5.6rem;
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__form-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-offset);
+    margin-bottom: 5.6rem;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .form__label {
+    grid-column: 2 span;
+    margin: 0;
+
+    @include mq(sm) {
+      grid-column: 4 span;
+    }
+  }
+
+  .form__btn-wrapper {
+    margin: 0;
+  }
+
+  &__btn-wrapper {
+    grid-column: 2 span;
+
+    @include mq(md) {
+      grid-column: 4 span;
+    }
+  }
+}

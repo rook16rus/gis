@@ -1,0 +1,13 @@
+mixin pageSlider(hedaing, text)
+  section.section.page-slider&attributes(attributes)
+    .site-content-container.page-slider__container
+      .page-slider__heading-wrapper
+        .page-slider__heading-block
+          h2.site-heading.page-slider__heading= hedaing
+          if text
+            .page-slider__txt
+              p= text
+        .page-slider__heading-block
+          +slider-nav("js-slider-btn-prev", "js-slider-btn-next")(class="page-slider__nav")
+      .page-slider__slider
+        block

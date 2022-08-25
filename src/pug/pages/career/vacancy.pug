@@ -1,0 +1,15 @@
+section.section.vacancy.js-fade-in
+  .site-content-container.vacancy__container
+    .vacancy__heading-wrapper
+      h2.vacancy__heading.site-heading Мы всегда открыты лучшим специалистам
+      +slider-nav("js-vacancy-btn-prev", "js-vacancy-btn-next")
+    .vacancy__lsit.swiper.js-vacancy-slider
+      .swiper-wrapper
+        each i in Array.from(Array(4).keys())
+          .vacancy__item.swiper-slide
+            h3 Руководитель проектов
+            p Управление командой специалистов и координация работы между отделами. Контроль исполнения процессов.
+            a(href="/")
+              | подать резюме
+              +icon-mono("arrow-top")(width="16" height="16")
+      .site-pagination

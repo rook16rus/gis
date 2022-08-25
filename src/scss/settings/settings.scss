@@ -41,12 +41,13 @@ html {
     font-size: 8px;
   }
 
-  @include mq(custom, max, 280) {
+  @include mq(custom, max, 300) {
     font-size: 7px;
   }
 }
 
 body {
+  position: relative;
   color: var(--color-dark);
   font: var(--font-text-main);
   background-color: var(--color-bg);
@@ -54,6 +55,17 @@ body {
   ::selection {
     background-color: var(--color-main-drop);
     color: var(--color-white);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(225deg, #FFFFFF 22.87%, #F0FDFF 41.98%);
+    content: "";
   }
 }
 
@@ -274,16 +286,18 @@ select:-webkit-autofill:focus {
   // }
 
   @include mq(sm) {
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
   }
 }
 
 .js-fade-in {
   opacity: 0;
-  transition: opacity 0.4s ease-in;
+  transform: translateY(4rem);
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in-out;
 
   &.fade-in {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 

@@ -1,0 +1,91 @@
+.vacancy {
+  &__heading-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 5.6rem;
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .slider-nav {
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    max-width: 95rem;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 3.2rem;
+    background-color: var(--color-white);
+    padding: 2.4rem;
+    min-height: 24rem;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font: var(--font-heading-4);
+      text-transform: uppercase;
+      font-stretch: 135%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font: var(--font-text-md);
+      color: var(--color-text-support);
+      font-stretch: 140%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
+    }
+
+    a {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font: var(--font-subheading);
+      text-transform: uppercase;
+      color: var(--color-main);
+      font-stretch: 135%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        inset: 0;
+        content: "";
+      }
+
+      .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: none;
+        stroke: var(--color-main);
+      }
+    }
+
+    @include mq(sm) {
+      padding: 2rem;
+      border-radius: 2rem;
+
+      h3 {
+        font: var(--font-heading-4-mobile);
+        font-stretch: 135%;
+        font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

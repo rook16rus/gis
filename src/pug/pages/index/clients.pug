@@ -17,14 +17,14 @@ section.clients.section
       p
         | Внедряем геоинформационные системы для
         | государственных структур и коммерческих организаций
-    .swiper.js-clients-slider
+    .swiper.js-clients-slider.js-fade-in
       .clients__list.swiper-wrapper
         for item in items
           .clients__item.swiper-slide
             img(data-src="assets/images/clients/img1.png" src="#" class="lazyload" alt="Государственное казенное учреждение «Центр цифровой трансформации Республики Татарстан»")
             p= item
       .site-pagination
-    .swiper.js-clients-slider
+    .swiper.js-clients-slider.js-fade-in
       .clients__list.swiper-wrapper
         for item in items
           .clients__item.swiper-slide

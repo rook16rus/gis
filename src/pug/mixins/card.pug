@@ -1,7 +1,7 @@
 mixin card(name, text, img, linktext, alt)
   .card&attributes(attributes)
     .card__img-wrapper
-      img(src=`assets/images/cards/${img}.jpg` alt=alt)
+      img.lazyload(src="#" data-src=`assets/images/cards/${img}.jpg` alt=alt)
     a(href="" class="card__name")= name
     p.card__text= text
     a(href="" class="card__link")

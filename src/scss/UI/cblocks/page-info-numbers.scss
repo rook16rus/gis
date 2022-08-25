@@ -35,7 +35,7 @@
   }
 
   &__item {
-    width: calc(33.3% - 8rem);
+    width: calc(33.3% - 4rem);
 
     @include mq(sm) {
       width: 100%;

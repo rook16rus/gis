@@ -29,8 +29,8 @@ section.partners.section
           .partners__heading-text
             p
               | Сотрудничаем с лучшими разработчиками геоинформационных систем
-          +button("Партнеры", "button--is-iconed", "arrow-right", "is-white")(class="partners__btn")
-      .swiper.js-partnerns-slider
+          +button("Партнеры", "button--is-iconed", "arrow-right", "is-white", null, "link")(class="partners__btn" href="/")
+      .swiper.js-partnerns-slider.js-fade-in
         ul.partners__list.swiper-wrapper
           for item in partners
             li.partners__item.swiper-slide
@@ -43,5 +43,5 @@ section.partners.section
                 .partners__num-text
                   span Совместных проектов
                   +icon-mono("arrow-top")(width="16" height="16")
-                +button("Сайт компании", "is-hovered-white", null, null)(class="partners__item-btn")
+                +button("Сайт компании", "is-hovered-white", null, null, null, "link")(href="/" target="_blank" class="partners__item-btn")
         .site-pagination.site-pagination--is-white

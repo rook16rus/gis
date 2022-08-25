@@ -24,6 +24,8 @@ export default () => {
       pin: true,
       start: "top 10%",
       end: "bottom 40%",
+      fastScrollEnd: true,
+      anticipatePin: 1,
     },
     onComplete: () => document.querySelector(".intro-layer").classList.remove("is-locked"),
     onReverseComplete: () => document.querySelector(".intro-layer").classList.add("is-locked"),

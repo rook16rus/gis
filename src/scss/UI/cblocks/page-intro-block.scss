@@ -47,6 +47,7 @@
     }
 
     @include mq(sm) {
+      margin-bottom: 2rem;
       font: var(--font-heading-3);
       font-stretch: 135%;
       font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
@@ -122,6 +123,111 @@
       font-weight: 500;
       font-stretch: 140%;
       font-variation-settings: "GRAD"0, "slnt"0, "XTRA"500, "XOPQ"96, "YOPQ"95, "YTLC"514, "YTUC"712, "YTAS"750, "YTDE"-203, "YTFI"738, "opsz"50;
+    }
+  }
+
+  &__info {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(sm) {
+      flex-direction: column;
+      margin-top: 0;
+      flex-grow: 1;
+      justify-content: stretch;
+      align-items: stretch;
+    }
+  }
+
+  &__info-block {
+    @include mq(sm) {
+      &:nth-child(2) {
+        margin-top: auto;
+      }
+    }
+  }
+
+  &__info-container {
+    padding: 4rem;
+    border: 1px solid var(--color-white);
+    border-radius: 3.2rem;
+    display: flex;
+    gap: 1.6rem;
+
+    @include mq(sm) {
+      padding: 2rem;
+      flex-direction: column;
+      gap: 2rem 0;
+      width: 100%;
+      align-self: stretch;
+    }
+  }
+
+  &__info-container-item {
+    width: 50%;
+
+    @include mq(sm) {
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  &__num {
+    display: block;
+    font: var(--font-num-md);
+    margin-bottom: 1.6rem;
+    color: var(--color-white);
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+
+    @include mq(sm) {
+      font: 700 2.8rem/92% var(--main-ff);
+      margin: 0;
+      margin-right: 1rem;
+      font-stretch: 135%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'44;
+    }
+  }
+
+  &__num-legend {
+    display: block;
+    font: var(--font-heading-5);
+    text-transform: uppercase;
+    font-stretch: 135%;
+    font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'46;
+  }
+
+  &__heading-text {
+    max-width: 50rem;
+
+    a {
+      position: relative;
+
+      &:hover {
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        border-bottom: 1px dashed var(--color-white);
+        transition: opacity var(--transition);
+        content: "";
+      }
+    }
+
+    @include mq(sm) {
+      max-width: 100%;
+      font: var(--font-text-md);
+      font-stretch: 140%;
+      font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
     }
   }
 }

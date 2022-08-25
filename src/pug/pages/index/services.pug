@@ -23,11 +23,11 @@
   ]
 
 section.section.services
-  +ticker("ticker-two")
+  +ticker("ticker-two")(class="services__ticker")
   .site-content-container.services__container
     h2.site-heading.services__heading.js-heading
       | Выполняем полный комплекс услуг
-    .swiper.js-services-slider
+    .swiper.js-services-slider.js-fade-in
       ul.services__list.swiper-wrapper
         for item in services_arr
           li.services__item.swiper-slide

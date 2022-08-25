@@ -20,6 +20,6 @@
         li.mobile-menu__item
           a.mobile-menu__link(href="/")= item
     .mobile-menu__btns
-      +button("Услуги", null, null, null)(class="mobile-menu__btn")
-      +button("Проекты", null, null, null)(class="mobile-menu__btn")
-      +button("Связаться", null, null, null, "chat", "link")(class="mobile-menu__btn")
+      +button("Услуги", null, null, null, null, "link")(class="mobile-menu__btn" href="/")
+      +button("Проекты", null, null, null, null, "link")(class="mobile-menu__btn" href="/")
+      +button("Связаться", null, null, null, "chat", "link")(class="mobile-menu__btn" href="/")

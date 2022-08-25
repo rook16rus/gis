@@ -82,10 +82,6 @@
     font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'90, 'YTLC'514, 'YTUC'712, 'YTAS'750, 'YTDE'-203, 'YTFI'738;
     color: var(--color-text-support);
 
-    &:nth-last-of-type(1) {
-      margin-bottom: 0;
-    }
-
     @include mq(sm) {
       font: var(--font-text-sm);
       font-stretch: 140%;
@@ -127,6 +123,18 @@
       font-weight: 700;
       font-stretch: 135%;
       font-variation-settings: 'GRAD'0, 'slnt'0, 'XTRA'468, 'XOPQ'96, 'YOPQ'79, 'YTLC'501, 'YTUC'620, 'YTAS'750, 'YTDE'-203, 'YTFI'738, 'opsz'46;
+    }
+  }
+
+  &--big-img {
+    .card__img-wrapper {
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }

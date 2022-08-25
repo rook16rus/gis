@@ -1,32 +1,43 @@
 .site-ticker {
   display: flex;
   align-items: center;
-  gap: 4rem;
   margin-bottom: 12rem;
 
   @include mq(md) {
     margin-bottom: 8rem;
   }
 
+  @include mq(sm) {
+    margin-bottom: 6rem;
+  }
+
   &__item {
     flex-shrink: 0;
     display: block;
-    height: 8rem;
-    width: 200rem;
+    height: 7rem;
+    width: 237.2rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin-right: 3em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
     @include mq(md) {
       height: 5rem;
-      width: 134rem;
       background-position: left center;
       margin-right: 2rem;
+      width: 220.2rem;
+
+      background-size: cover;
     }
 
     @include mq(sm) {
       height: 4rem;
-      width: 99.6rem;
       margin-right: 1rem;
+      width: 175.2rem;
     }
   }
 }

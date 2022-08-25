@@ -27,9 +27,12 @@ import blocksReveal from './modules/fadeInBlocks';
 import marquee from './modules/marquee';
 import tabs from './modules/tabs';
 import numberBlockSlider from './modules/numberBlockSlider';
+import vacansySlider from './modules/vacansySlider';
+import pageSlider from './modules/pageSlider';
+import videoPlay from './modules/videoPlay';
+import { enableScroll } from './helpers/disableScroll';
 
 const descktop = window.matchMedia("(min-width: 992px)");
-
 
 window.addEventListener("load", () => {
   const preloader = document.querySelector(".preloader");
@@ -40,7 +43,6 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     preloader.style.display = "none";
   }, 450);
-
 
   descktop.matches ?
     loadImages().then(() => maskClickHandle()) : null;
@@ -75,4 +77,7 @@ documenReady(() => {
   marquee();
   tabs();
   numberBlockSlider();
+  vacansySlider();
+  pageSlider();
+  videoPlay();
 });

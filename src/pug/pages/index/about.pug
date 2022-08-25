@@ -1,5 +1,5 @@
 section.about.section(id="pannel")
-  +ticker("ticker-one")
+  +ticker("ticker-one")(class="about__ticker")
   .site-content-container.about__container
     .about__content-container
       .about__heading-container-block
@@ -11,7 +11,7 @@ section.about.section(id="pannel")
             | Cпециализируемся на внедрении геоинформационных
             | систем для решения задач государственного и муниципального управления.
         +button("о компании", "button--is-iconed", "arrow-right")
-    .about__content-container
+    .about__content-container.js-fade-in
       .about__item-block
         img(data-src="assets/images/about/img.jpg" src="#" alt="Картинка картинка" class="about__item-img lazyload")
         +slider-nav("js-about-btn-prev", "js-about-btn-next")(class="about__slider-nav")

@@ -138,6 +138,20 @@
     }
   }
 
+  &__ticker {
+    .site-ticker__item {
+      width: 203.2rem;
+
+      @include mq(md) {
+        width: 158.2rem;
+      }
+
+      @include mq(sm) {
+        width: 123.2rem;
+      }
+    }
+  }
+
   &__item-bg-img {
     position: absolute;
     top: 0;

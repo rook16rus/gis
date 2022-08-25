@@ -2,7 +2,7 @@
   position: relative;
   z-index: 45;
   padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
 
   @include mq(sm) {
     padding-bottom: 5rem;
@@ -44,7 +44,11 @@
   }
 
   &__logo {
-    margin-right: 12.2rem;
+    margin-right: 17%;
+
+    @include mq(lg) {
+      margin-right: 9%;
+    }
 
     @include mq(md) {
       margin-right: 2rem;
