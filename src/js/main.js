@@ -36,12 +36,19 @@ const descktop = window.matchMedia("(min-width: 992px)");
 
 window.addEventListener("load", () => {
   const preloader = document.querySelector(".preloader");
+  const body = document.querySelector("body");
   firstLoadAnimation();
 
   preloader.classList.add("is-hidden");
 
   setTimeout(() => {
     preloader.style.display = "none";
+
+    if (body.classList.contains("is-active")) {
+      return;
+    } else {
+     enableScroll();
+    }
   }, 450);
 
   descktop.matches ?

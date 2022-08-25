@@ -9,10 +9,14 @@ export default () => {
   const heading = document.querySelector(".intro__content-heading");
   const headingText = document.querySelector(".intro__content-text");
   const layer = document.querySelector(".intro-layer");
+  const body = document.querySelector("body");
   const timeline = gsap.timeline({
     paused: true,
     onComplete: () => {
       enableScroll();
+    },
+    onStart: () => {
+      body.classList.add("is-active");
     }
   });
 
